@@ -34,11 +34,11 @@ const Header = () => {
   const notShow = isShow;
 
   return (
-    <header className="container mx-auto mx-wd-md bg-white flex justify-evenly relative h-40 z-10 drop-shadow-lg max-sm:flex-col max-sm:pl-6 max-sm:gap-5 p-6 overflow-hidden max-sm:w-fu">
+    <header className="container mx-auto mx-wd-md bg-white flex justify-evenly relative h-40 z-10 drop-shadow-lg max-sm:flex-col max-sm:pl-4 max-sm:gap-5 p-6 overflow-hidden max-sm:w-fu">
       <div>
         <FontAwesomeIcon
           icon={faBars}
-          className=" max-sm:absolute max-sm:top-14 left-3/4 text-nav lg:hidden"
+          className=" max-sm:absolute max-sm:top-14 max-sm:right-[8%] text-nav lg:hidden"
         />
       </div>
       <div className="flex mr-20">
@@ -54,13 +54,13 @@ const Header = () => {
       </div>
       <div>
         <input
-          className="w-96 h-8 border-2 border-log outline-none rounded-lg bg-white mr-24 relative px-2 text-sm text-nav max-sm:w-4/5 max-sm:ml-10"
+          className="w-96 h-8 border-2 border-log outline-none rounded-lg bg-white mr-24 relative px-2 text-sm text-nav max-sm:w-11/12 max-sm:ml-10"
           type="text"
           placeholder="Search"
         />
         <Link>
           <FontAwesomeIcon
-            className="absolute text-pri -ml-32 mt-2 max-sm:left-full max-sm:bottom-9"
+            className="absolute text-pri -ml-32 mt-2 max-sm:right-[8%] max-sm:bottom-9"
             icon={faMagnifyingGlass}
           />
         </Link>
