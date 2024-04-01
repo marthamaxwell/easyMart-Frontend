@@ -34,7 +34,7 @@ const Header = () => {
   const notShow = isShow;
 
   return (
-    <header className="container mx-auto mx-wd-md bg-white flex justify-evenly relative h-40 z-10 drop-shadow-lg max-sm:flex-col max-sm:pl-10 max-sm:gap-5 p-6 overflow-hidden max-sm:w-fu">
+    <header className="container mx-auto mx-wd-md bg-white flex justify-evenly relative h-40 z-10 drop-shadow-lg max-sm:flex-col max-sm:pl-6 max-sm:gap-5 p-6 overflow-hidden max-sm:w-fu">
       <div>
         <FontAwesomeIcon
           icon={faBars}
@@ -54,7 +54,7 @@ const Header = () => {
       </div>
       <div>
         <input
-          className="w-96 h-8 border-2 border-log outline-none rounded-lg bg-white mr-24 relative px-2 text-sm text-nav max-sm:w-3/4 max-sm:ml-10"
+          className="w-96 h-8 border-2 border-log outline-none rounded-lg bg-white mr-24 relative px-2 text-sm text-nav max-sm:w-4/5 max-sm:ml-10"
           type="text"
           placeholder="Search"
         />
