@@ -34,7 +34,7 @@ const Header = () => {
   const notShow = isShow;
 
   return (
-    <header className="container mx-auto mx-wd-md bg-white flex justify-evenly relative h-40 z-10 drop-shadow-lg max-sm:flex-col max-sm:pl-16 max-sm:gap-5 p-6">
+    <header className="container mx-auto mx-wd-md bg-white flex justify-evenly relative h-40 z-10 drop-shadow-lg max-sm:flex-col max-sm:pl-10 max-sm:gap-5 p-6 overflow-hidden max-sm:w-fu">
       <div>
         <FontAwesomeIcon
           icon={faBars}
