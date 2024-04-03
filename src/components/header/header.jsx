@@ -41,7 +41,7 @@ const Header = () => {
 
   return (
     <div className="">
-      <header className="container mx-auto mx-wd-md bg-white flex flex-wrap justify-evenly relative h-40 z-10 drop-shadow-lg max-sm:flex-col max-sm:pl-1 max-sm:gap-5 p-6   ">
+      <header className=" mx-wd-md bg-white flex flex-wrap justify-evenly relative h-40 z-10 drop-shadow-lg max-sm:flex-col max-sm:pl-1 max-sm:gap-5 p-6   ">
         <div>
           <FontAwesomeIcon
             icon={faBars}
