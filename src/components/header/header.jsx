@@ -9,7 +9,6 @@ import {
 import { faHeart, faUser } from "@fortawesome/free-regular-svg-icons";
 import arrowIcon from "../../assets/svg/arrowIcon.svg";
 import downIcon from "../../assets/svg/downicon.svg";
-
 import Navbars from "../../components/header/dropdown.jsx";
 
 const Header = () => {
@@ -41,8 +40,8 @@ const Header = () => {
   };
 
   return (
-    <div className=" ">
-      <header className="container mx-auto mx-wd-md bg-white flex flex-wrap justify-evenly relative h-40 z-10 drop-shadow-lg max-sm:flex-col max-sm:pl-1 max-sm:gap-5 p-6 overflow-hidden">
+    <div className="">
+      <header className="container mx-auto mx-wd-md bg-white flex flex-wrap justify-evenly relative h-40 z-10 drop-shadow-lg max-sm:flex-col max-sm:pl-1 max-sm:gap-5 p-6   ">
         <div>
           <FontAwesomeIcon
             icon={faBars}
@@ -69,7 +68,7 @@ const Header = () => {
           />
           <Link>
             <FontAwesomeIcon
-              className="absolute text-pri -ml-32 mt-2 max-sm:right-[8%] max-sm:bottom-9"
+              className="absolute text-pri -ml-32 mt-2 max-sm:right-[20%] max-sm:bottom-9"
               icon={faMagnifyingGlass}
             />
           </Link>

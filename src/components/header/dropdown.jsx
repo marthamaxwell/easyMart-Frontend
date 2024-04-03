@@ -10,14 +10,14 @@ import { faHeart, faUser } from "@fortawesome/free-regular-svg-icons";
 
 const Navbars = ({ OpenMenu, Open }) => {
   return (
-    <div
-      className={
-        Open
-          ? "max-sm:flex flex-col hidden items-center absolute h-full justify-center inset-0 left-1/4  bg-pri"
-          : "hidden"
-      }
-    >
-      <nav className="">
+    <div className="">
+      <nav
+        className={
+          Open
+            ? "max-sm:flex flex-col hidden items-center fixed h-[100vh] justify-center inset-0 left-1/4  bg-pri gap-8  "
+            : "hidden"
+        }
+      >
         <FontAwesomeIcon icon={faXmark} onClick={OpenMenu} />
         <Link to={""} className="">
           <div className="">
@@ -26,7 +26,7 @@ const Navbars = ({ OpenMenu, Open }) => {
               className="h-7 absolute -ml-9 mt-2 text-nav"
             />
 
-            <ul>
+            <ul className="">
               <li className="text-log">Login</li>
               <li className="text-nav">Account</li>
             </ul>
@@ -48,7 +48,7 @@ const Navbars = ({ OpenMenu, Open }) => {
         <Link to={""}>
           <div className=" flex ">
             <FontAwesomeIcon
-              className="h-7 absolute -ml-10 mt-2 text-nav"
+              className="h-7 absolute -ml-16 mt-2 text-nav"
               icon={faCartShopping}
             />
 
