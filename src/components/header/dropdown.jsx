@@ -14,7 +14,7 @@ const Navbars = ({ OpenMenu, Open }) => {
       <nav
         className={
           Open
-            ? "max-sm:flex flex-col hidden items-center fixed h-[100vh] justify-center inset-0 left-1/4  bg-pri gap-8  "
+            ? "max-sm:flex flex-col hidden items-center fixed h-screen justify-center inset-0 left-1/4  bg-pri gap-8 z-10 "
             : "hidden"
         }
       >
