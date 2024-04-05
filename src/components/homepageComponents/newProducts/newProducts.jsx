@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import NewProductCard from "./newProductsCard";
-import PopularProduct from "./popularProduct";
+import PopularProduct from "../Popular products/popularProduct";
 
 const NewProducts = () => {
   const [productData, setProductData] = useState([]);

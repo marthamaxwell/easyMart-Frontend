@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import heart from "../../../assets/svg/heart.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faHeart } from "@fortawesome/free-solid-svg-icons";
-import heart from "../../assets/svg/heart.svg";
 
-const ProductCard = ({ miles }) => {
+const SpecialOfferCard = ({ miles }) => {
   console.log("props from products =>", miles);
   return (
     <div class="w-4/5 h-80 mt-8   mx-auto px-4 ">
@@ -37,4 +37,4 @@ const ProductCard = ({ miles }) => {
   );
 };
 
-export default ProductCard;
+export default SpecialOfferCard;

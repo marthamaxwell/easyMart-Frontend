@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faHeart } from "@fortawesome/free-solid-svg-icons";
-import heart from "../../assets/svg/heart.svg";
-import PopularProduct from "./popularProduct";
+import heart from "../../../assets/svg/heart.svg";
+import PopularProduct from "../Popular products/popularProduct";
 
 const NewProductCard = ({ miles }) => {
   console.log("props from products =>", miles);
