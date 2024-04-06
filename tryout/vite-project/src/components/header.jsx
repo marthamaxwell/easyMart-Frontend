@@ -40,81 +40,83 @@ const Header = () => {
   };
 
   return (
-    <div className="p-2 ml-3">
-      <header className="  ">
+    <div className="">
+      <header className=" mx-wd-md bg-white flex flex-wrap justify-evenly relative h-40 drop-shadow-lg max-sm:flex-col max-sm:pl-1 max-sm:gap-5 p-6   ">
         <div>
           <FontAwesomeIcon
             icon={faBars}
             onClick={OpenMenu}
-            className=" lg:hidden absolute right-[5%] mt-2 text-nav"
+            className=" max-sm:absolute max-sm:top-14 max-sm:right-[8%] text-nav lg:hidden md:hidden"
           />
         </div>
-        <div className="flex ">
-          <FontAwesomeIcon className="text-pri mt-1" icon={faCartShopping} />
-          <h1 className="text-nav font-bold text-lg mb-2">
+        <div className="flex mr-20">
+          <FontAwesomeIcon
+            className="text-pri mt-[7px] mr-1 max-sm:ml-10"
+            icon={faCartShopping}
+          />
+          <h1 className="text-nav font-bold text-lg ">
             Easy
             <span className="text-pri inline-block font-extrabold">.</span>
             Mart
           </h1>
-          <nav className=" flex">
-            <Link to={""} className="">
-              <div className="">
-                <FontAwesomeIcon
-                  icon={faUser}
-                  className=" absolute right-[45%] mt-2  text-nav"
-                />
-
-                <ul>
-                  <li className="text-log hidden">Login</li>
-                  <li className="text-nav hidden">Account</li>
-                </ul>
-              </div>
-            </Link>
-            <Link to={""}>
-              <div className="">
-                {" "}
-                <FontAwesomeIcon
-                  className=" text-nav absolute right-[35%] mt-2"
-                  icon={faHeart}
-                />
-                <ul>
-                  <li className="text-nav hidden">Favourite</li>
-                  <li className="text-nav hidden">List</li>
-                </ul>
-              </div>
-            </Link>
-            <Link to={""}>
-              <div className=" flex ">
-                <FontAwesomeIcon
-                  className="text-nav absolute right-[25%] mt-2"
-                  icon={faCartShopping}
-                />
-
-                <ul>
-                  <li className="text-nav hidden">Total</li>
-                  <li className="text-nav hidden">0NGN</li>
-                </ul>
-                <div className="w-5 h-5 flex justify-center bg-red-700 text-white text-sm rounded-xl right-[]  ">
-                  0
-                </div>
-              </div>
-            </Link>
-          </nav>
         </div>
         <div>
           <input
-            className="w-[100%]  bg-white text-nav border-2 rounded-lg outline-none relative indent-1 :"
+            className="w-96 h-8 border-2 border-log outline-none rounded-lg bg-white mr-24 relative px-2 text-sm text-nav max-sm:w-11/12 max-sm:ml-10"
             type="text"
             placeholder="Search"
           />
           <Link>
             <FontAwesomeIcon
-              className="absolute right-[5%] mt-1 text-pri"
+              className="absolute text-pri -ml-32 mt-2 max-sm:right-[20%] max-sm:bottom-9"
               icon={faMagnifyingGlass}
             />
           </Link>
         </div>
+        <nav className="flex  gap-32 max-sm:flex-row max-sm:hidden">
+          <Link to={""} className="">
+            <div className="">
+              <FontAwesomeIcon
+                icon={faUser}
+                className="h-7 absolute -ml-9 mt-2 text-nav"
+              />
 
+              <ul>
+                <li className="text-log">Login</li>
+                <li className="text-nav">Account</li>
+              </ul>
+            </div>
+          </Link>
+          <Link to={""}>
+            <div className="">
+              {" "}
+              <FontAwesomeIcon
+                className="h-7 absolute -ml-9 mt-2 text-nav"
+                icon={faHeart}
+              />
+              <ul>
+                <li className="text-nav">Favourite</li>
+                <li className="text-nav">List</li>
+              </ul>
+            </div>
+          </Link>
+          <Link to={""}>
+            <div className=" flex ">
+              <FontAwesomeIcon
+                className="h-7 absolute -ml-10 mt-2 text-nav"
+                icon={faCartShopping}
+              />
+
+              <ul>
+                <li className="text-nav">Total</li>
+                <li className="text-nav">0NGN</li>
+              </ul>
+              <div className="w-5 h-5 flex justify-center bg-red-700 text-white text-sm rounded-xl -ml-16 z-10 ">
+                0
+              </div>
+            </div>
+          </Link>
+        </nav>
         <Navbars OpenMenu={OpenMenu} Open={Open} />
         <div className="absolute bottom-4 flex flex-wrap gap-8 max-sm:hidden">
           <div className="text-nav">All Categories</div>
