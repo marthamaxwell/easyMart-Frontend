@@ -40,7 +40,7 @@ const Header = () => {
   };
 
   return (
-    <div className="p-5 ml-3">
+    <div className="pt-5 pr-2 ml-3">
       <header className="  ">
         <div>
           <FontAwesomeIcon
