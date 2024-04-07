@@ -9,6 +9,8 @@ export default {
         nav: "#575454",
         card: "#F9F5F5",
         sm: "#EECCB4",
+        col: "#F9F9F9",
+        dark: "#171616",
       },
     },
   },

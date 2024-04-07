@@ -1,12 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faXmark,
-  faCartShopping,
-  faMagnifyingGlass,
-} from "@fortawesome/free-solid-svg-icons";
-import { faHeart, faUser } from "@fortawesome/free-regular-svg-icons";
+import { faXmark, faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 const Navbars = ({ OpenMenu, Open }) => {
   return (
@@ -14,53 +9,20 @@ const Navbars = ({ OpenMenu, Open }) => {
       <nav
         className={
           Open
-            ? "max-sm:flex flex-col hidden items-center fixed h-screen justify-center inset-0 left-1/4  bg-pri gap-8 z-10 "
+            ? "flex flex-col items-center fixed h-screen justify-evenely inset-0 left-1/4  bg-pri z-10"
             : "hidden"
         }
       >
-        <FontAwesomeIcon icon={faXmark} onClick={OpenMenu} />
-        <Link to={""} className="">
-          <div className="">
-            <FontAwesomeIcon
-              icon={faUser}
-              className="h-7 absolute -ml-9 mt-2 text-nav"
-            />
-
-            <ul className="">
-              <li className="text-log">Login</li>
-              <li className="text-nav">Account</li>
-            </ul>
-          </div>
-        </Link>
-        <Link to={""}>
-          <div className="">
-            {" "}
-            <FontAwesomeIcon
-              className="h-7 absolute -ml-9 mt-2 text-nav"
-              icon={faHeart}
-            />
-            <ul>
-              <li className="text-nav">Favourite</li>
-              <li className="text-nav">List</li>
-            </ul>
-          </div>
-        </Link>
-        <Link to={""}>
-          <div className=" flex ">
-            <FontAwesomeIcon
-              className="h-7 absolute -ml-16 mt-2 text-nav"
-              icon={faCartShopping}
-            />
-
-            <ul>
-              <li className="text-nav">Total</li>
-              <li className="text-nav">0NGN</li>
-            </ul>
-            <div className="w-5 h-5 flex justify-center bg-red-700 text-white text-sm rounded-xl -ml-16 z-10 ">
-              0
-            </div>
-          </div>
-        </Link>
+        <FontAwesomeIcon icon={faXmark} onClick={OpenMenu} className="pt-6" />
+        <ul className="mt-3">
+          <li className="text-nav mb-3">Phone</li>
+          <li className="text-nav mb-3">Computer & Accessories</li>
+          <li className="text-nav mb-3">Television</li>
+          <li className="text-nav mb-3">Clothes</li>
+          <li className="text-nav mb-3">Shoes</li>
+          <li className="text-nav mb-3">Camera & Headset</li>
+          <li className="text-nav mb-3">Smartwatch</li>
+        </ul>
       </nav>
     </div>
   );

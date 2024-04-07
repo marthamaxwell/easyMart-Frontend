@@ -1,20 +1,18 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "./productCard";
+import { Axios } from "axios";
 
 const Products = () => {
   const [productData, setProductData] = useState([]);
-  console.log("products coming from state =>", productData);
 
   const fetchData = async () => {
     const response = await fetch("https://fakestoreapi.com/products");
-
-    console.log("the data response =>", response);
 
     // // the full data
 
     const products = await response.json();
     setProductData(products);
-    console.log("the products =>", products);
+    // console.log("the products =>", products);
   };
 
   //the use effect hook

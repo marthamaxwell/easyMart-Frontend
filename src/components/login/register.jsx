@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const RegistrationForm = () => {
   const navigate = useNavigate();
   // const base_url = import.meta.env.VITE_API_BASE_URL;
-  const base_url = "http://localhost:9000";
+  const base_url = "http://localhost:4000";
   //states for reg
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -29,7 +29,7 @@ const RegistrationForm = () => {
         name: fullname,
       })
       .then((res) => {
-        console.log("the login sussess response => ", res);
+        console.log("the registered sussess response => ", res);
         if (res.data.success) {
           navigate("/login");
         }

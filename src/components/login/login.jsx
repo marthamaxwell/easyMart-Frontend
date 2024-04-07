@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import image from "../../assets/images/5.png";
+import vector from "../../assets/images/Vector.png";
 
 const LoginForm = () => {
   const navigate = useNavigate();
   // const base_url = import.meta.env.VITE_API_BASE_URL;
-  const base_url = "http://localhost:9000";
+  const base_url = "http://localhost:4000";
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -37,15 +39,17 @@ const LoginForm = () => {
       .finally(() => setIsLoading(false));
   };
   return (
-    <div className="max-w-2xl mx-auto py-20">
-      <div className=" bg-white drop-shadow-md p-5 w-full">
-        <h1 className="text-center font-semibold">Login Form</h1>
-        <form onSubmit={handleSubmit} className="space-y-3">
+    <div className="max-w-2xl mx-auto mb-5 py-20">
+      <div className="bg-white w-full p-5 flex h-96 relative rounded-md border-2">
+        <img src={image} className="w-1/2" alt="" />
+
+        <form onSubmit={handleSubmit} className="space-y-3 grow">
+          <h1 className="font-semibold mb-3 text-2xl">Login</h1>
           <div className="flex flex-col space-y-1">
             <label htmlFor="">Email</label>
             <input
               type="email"
-              placeholder="Email"
+              placeholder="Email Here"
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -56,7 +60,7 @@ const LoginForm = () => {
             <label htmlFor="">Password</label>
             <input
               type="password"
-              placeholder="Password"
+              placeholder="Password Here"
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -66,11 +70,15 @@ const LoginForm = () => {
           <button
             disabled={isLoading}
             type="submit"
-            className="bg-gray-300 px-5 py-2 rounded-md font-medium disabled:opacity-40 disabled:cursor-not-allowed"
+            className="bg-pri px-5 py-2 text-white rounded-md w-full font-medium disabled:opacity-40 disabled:cursor-not-allowed"
           >
             Login
           </button>
         </form>
+        <div className="absolute bottom-[15%] left-[50%] ">
+          <h3>Dont have an account? Sign Up</h3>
+          <p className="text-nav">or Login with</p>
+        </div>
       </div>
     </div>
   );

@@ -10,6 +10,7 @@ import Banner from "../components/homepageComponents/banner";
 import Special from "../components/homepageComponents/specialOffer/special";
 import SpecialOffer from "../components/homepageComponents/specialOffer/specialOffers";
 import Collection from "../components/homepageComponents/collection/collection";
+import TheFooter from "../components/footer/2ndfooter";
 
 const HomePage = () => {
   return (
@@ -23,6 +24,7 @@ const HomePage = () => {
       <SpecialOffer />
       <Banner />
       <Collection />
+      <TheFooter />
     </div>
   );
 };
