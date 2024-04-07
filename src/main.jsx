@@ -11,6 +11,7 @@ import SignupPage from "./pages/signupPage.jsx";
 import ProductPage from "./pages/productPage.jsx";
 import CartPage from "./pages/cartPage.jsx";
 import ResetPasswordPage from "./pages/resetPasswordPage.jsx";
+import UserAccount from "./pages/userAccount.jsx";
 
 const router = createBrowserRouter([
   {
@@ -50,6 +51,11 @@ const router = createBrowserRouter([
       {
         path: "/resetpassword",
         element: <ResetPasswordPage />,
+      },
+
+      {
+        path: "/user",
+        element: <UserAccount />,
       },
     ],
   },

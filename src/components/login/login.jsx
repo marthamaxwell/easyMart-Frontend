@@ -3,6 +3,9 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import image from "../../assets/images/5.png";
 import vector from "../../assets/images/Vector.png";
+import google from "../../assets/images/google.png";
+import facebook from "../../assets/images/facebook.png";
+import apple from "../../assets/images/apple.png";
 
 const LoginForm = () => {
   const navigate = useNavigate();
@@ -39,45 +42,62 @@ const LoginForm = () => {
       .finally(() => setIsLoading(false));
   };
   return (
-    <div className="max-w-2xl mx-auto mb-5 py-20">
-      <div className="bg-white w-full p-5 flex h-96 relative rounded-md border-2">
-        <img src={image} className="w-1/2" alt="" />
-
-        <form onSubmit={handleSubmit} className="space-y-3 grow">
+    <div className="flex justify-center items-center mr-[10%] ">
+      <div className="flex flex-col gap-3 mb-9 mt-11">
+        <form onSubmit={handleSubmit} className="space-y-4 grow">
           <h1 className="font-semibold mb-3 text-2xl">Login</h1>
-          <div className="flex flex-col space-y-1">
-            <label htmlFor="">Email</label>
-            <input
-              type="email"
-              placeholder="Email Here"
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-3 py-2 outline-none border border-gray-400 rounded-md"
-            />
-          </div>
-          <div className="flex flex-col space-y-1 w-full">
-            <label htmlFor="">Password</label>
-            <input
-              type="password"
-              placeholder="Password Here"
-              required
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-3 py-2 outline-none border border-gray-400 rounded-md"
-            />
-          </div>
+
+          <input
+            type="email"
+            placeholder="Email Here"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="w-full px-3 py-4 outline-none border border-gray-400 rounded-md"
+          />
+
+          <input
+            type="password"
+            placeholder="Password Here"
+            required
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="w-full px-3 py-4 outline-none border border-gray-400 rounded-md"
+          />
+          <span className="text-xs text-pri">Forgot Password</span>
+
           <button
             disabled={isLoading}
             type="submit"
-            className="bg-pri px-5 py-2 text-white rounded-md w-full font-medium disabled:opacity-40 disabled:cursor-not-allowed"
+            className="bg-pri px-5 py-2 text-white rounded-md w-full font-medium flex justify-between items-center disabled:opacity-40 disabled:cursor-not-allowed mt-32s"
           >
-            Login
+            <p className="flex-grow text-center">Login</p>
+            <span className="text-3xl">&rarr;</span>
           </button>
         </form>
-        <div className="absolute bottom-[15%] left-[50%] ">
-          <h3>Dont have an account? Sign Up</h3>
-          <p className="text-nav">or Login with</p>
+        <div className="">
+          <h4 className="text-center">
+            Dont have an account? <span>Sign Up </span>
+          </h4>
+          <div>
+            <p className="text-nav text-center">Or Login with</p>
+
+            {/* BOTTOM ICONS WRAPPER */}
+            <div className="w-full flex gap-2">
+              <div className="w-1/3 border border-[#BDBFBE] py-2 px-4 flex items-center justify-center gap-2 rounded-md">
+                <img src={facebook} alt="facebook" />
+                <p>Facebook</p>
+              </div>
+              <div className="w-1/3 border border-[#BDBFBE] py-2 px-4 flex items-center justify-center gap-2 rounded-md">
+                <img src={google} alt="google" />
+                <p>Google</p>
+              </div>
+              <div className="w-1/3 border border-[#BDBFBE] py-2 px-4 flex items-center justify-center gap-2 rounded-md">
+                <img src={apple} alt="apple" />
+                <p>Apple</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

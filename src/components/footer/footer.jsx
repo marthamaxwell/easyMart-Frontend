@@ -15,7 +15,7 @@ import frame5 from "../../assets/images/4.png";
 
 const Footer = () => {
   return (
-    <div className="flex justify-around bg-dark h-96 p-4 relative">
+    <div className="flex flex-wrap justify-around bg-dark h-96 p-4 relative">
       <div className="text-white">
         <h3 className="uppercase font-bold mb-3">About</h3>
         <ul className="flex flex-col gap-3">

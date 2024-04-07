@@ -1,14 +1,14 @@
 import React from "react";
-import RegistrationForm from "../components/login/register";
+import UserAcc from "../components/userAccount/userAcc";
 import TheFooter from "../components/footer/2ndfooter";
 
-const SignupPage = () => {
+const UserAccount = () => {
   return (
     <div>
-      <RegistrationForm />
+      <UserAcc />
       <TheFooter />
     </div>
   );
 };
 
-export default SignupPage;
+export default UserAccount;
