@@ -1,21 +1,22 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "./productCard";
-import { Axios } from "axios";
+import axios from "axios";
 
 const Products = () => {
-  const [productData, setProductData] = useState([]);
+  const [popularData, setPopularData] = useState([]);
 
   const fetchData = async () => {
-    const response = await fetch("https://fakestoreapi.com/products");
-
-    // // the full data
-
-    const products = await response.json();
-    setProductData(products);
-    // console.log("the products =>", products);
+    try {
+      const response = await axios.get(
+        "https://easymart-backend-946x.onrender.com/product/popular"
+      );
+      const products = await response.json();
+      setPopularData(products);
+      console.log(products);
+    } catch (error) {
+      console.error(error.message);
+    }
   };
-
-  //the use effect hook
 
   useEffect(() => {
     fetchData();
@@ -23,7 +24,7 @@ const Products = () => {
 
   return (
     <div className="flex w-11/12 mx-auto max-sm:flex-wrap">
-      {productData?.slice(0, 4).map((products) => (
+      {popularData?.slice(0, 4).map((products) => (
         <ProductCard key={products?.id} miles={products} />
       ))}
     </div>

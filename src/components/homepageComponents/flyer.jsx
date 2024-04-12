@@ -3,7 +3,7 @@ import heroBanner from "../../assets/images/hero-banner.png";
 const Flyer = () => {
   return (
     <div>
-      <img src={heroBanner} alt="" className="mx-auto w-11/12 mt-12" />
+      <img src={heroBanner} alt="" className="mx-auto w-[80%] mt-12" />
     </div>
   );
 };

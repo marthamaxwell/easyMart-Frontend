@@ -6,7 +6,6 @@ const SignupPage = () => {
   return (
     <div>
       <RegistrationForm />
-      <TheFooter />
     </div>
   );
 };

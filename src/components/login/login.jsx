@@ -31,7 +31,7 @@ const LoginForm = () => {
       .then((res) => {
         console.log("the login sussess response => ", res);
         if (res.data.success) {
-          navigate("/signup");
+          navigate("/test");
         }
       })
       .catch((error) => {

@@ -9,7 +9,7 @@ import {
 
 const TheFooter = () => {
   return (
-    <div className="flex flex-wrap justify-between p-3 bg-col">
+    <div className="flex flex-wrap justify-between px-8 py-3 bg-col h-22">
       <div className="flex ">
         <FontAwesomeIcon
           className="text-pri mt-1 mr-[2px]"
@@ -21,20 +21,25 @@ const TheFooter = () => {
           Mart
         </h1>
       </div>
-      <div className="">
-        <FontAwesomeIcon icon={faMessage} />
-        <h1>Email Support</h1>
-        <p className="">easymart@gmail.com</p>
+      <div className="flex flex-col pb-3 ">
+        {/* <FontAwesomeIcon icon={faMessage} /> */}
+        <h1 className="font-bold text-md text-nav">Email Support</h1>
+        <p className="font-bold text-nav">easymart@gmail.com</p>
       </div>
-      <div>
-        <h1>Get Notifications on Latest deals</h1>
-        <p>our best promotions sent to your inbox</p>
+      <div className="pb-3">
+        <h1 className="font-bold text-nav">
+          Get Notifications on Latest deals
+        </h1>
+        <p className="font-bold text-nav">
+          {" "}
+          our best promotions sent to your inbox
+        </p>
       </div>
       <div>
         <input
           type="text"
           placeholder="Email Address"
-          className="border-2 rounded-l border-slate-200 h-8 outline-none "
+          className="border-2 rounded-l border-slate-200 h-8 outline-none indent-2 mt-2 "
         />
         <button className="bg-pri w-40 mr-8 h-8 text-white rounded-r hover:bg-orange-700">
           Subscribe

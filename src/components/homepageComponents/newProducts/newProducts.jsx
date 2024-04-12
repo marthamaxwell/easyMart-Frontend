@@ -1,33 +1,35 @@
 import React, { useEffect, useState } from "react";
 
 import NewProductCard from "./newProductsCard";
-import PopularProduct from "../Popular products/popularProduct";
+
+import axios from "axios";
 
 const NewProducts = () => {
-  const [productData, setProductData] = useState([]);
-
+  const [newData, setNewData] = useState([]);
   const fetchData = async () => {
-    const response = await fetch("https://fakestoreapi.com/products");
+    try {
+      const response = await fetch(
+        "https://easymart-backend-946x.onrender.com/product/getProducts"
+      );
+      const products = await response.json();
+      setNewData(products);
+      console.log(products);
+    } catch (error) {
+      console.error("not found", error.message);
+    }
 
-    // // the full data
-
-    const products = await response.json();
-    setProductData(products);
+    useEffect(() => {
+      fetchData();
+    }, []);
   };
-
-  //the use effect hook
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
   return (
     <div className="flex max-sm:flex-wrap">
-      {productData?.slice(0, 4).map((products) => (
+      {newData?.map((products) => (
         <NewProductCard key={products?.id} miles={products} />
       ))}
     </div>
   );
+  //the use effect hook
 };
 
 export default NewProducts;

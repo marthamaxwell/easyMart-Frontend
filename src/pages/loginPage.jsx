@@ -7,7 +7,6 @@ const LoginPage = () => {
   return (
     <div>
       <LoginForm />
-      <TheFooter />
     </div>
   );
 };

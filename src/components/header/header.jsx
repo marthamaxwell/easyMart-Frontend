@@ -40,11 +40,8 @@ const Header = () => {
   };
 
   return (
-    <div className="pt-5 pr-2 ml-3 ">
-      <header
-        className="md:flex md:justify-evenly md:h-40  md
-      :w-11/12 relative md:p-3 "
-      >
+    <div className="">
+      <header className="flex md: flex-wrap md:justify-center md:gap-8 md:h-30  relative md:p-4 justify-center p-5 ">
         <div>
           <FontAwesomeIcon
             icon={faBars}
@@ -52,49 +49,49 @@ const Header = () => {
             className=" lg:hidden absolute right-[5%] mt-2 text-nav"
           />
         </div>
-        <div className="flex j">
+        <div className="flex ">
           <FontAwesomeIcon
-            className="text-pri mt-1 mr-[2px]"
+            className="text-pri mt-2 mr-[2px]"
             icon={faCartShopping}
           />
-          <h1 className="text-nav font-bold text-lg mb-2 md:mb-0 md:text-2xl">
+          <h1 className="text-nav font-bold text-lg mb-2  md:text-2xl">
             Easy
             <span className="text-pri inline-block font-extrabold">.</span>
             Mart
           </h1>
         </div>
-        <div>
+        <div className="md: mt-2 flex">
           <input
-            className="w-[100%]  bg-white text-nav border-2 rounded-lg outline-none relative indent-1 md:w-96 md:h-8 md:relative :"
+            className="invisible  bg-white text-nav border-2 rounded-lg outline-none relative indent-2 md:w-96 md:h-8 md:relative md:visible :"
             type="text"
             placeholder="Search"
           />
           <Link>
             <FontAwesomeIcon
-              className="absolute right-[5%] mt-1 text-pri md:right-[42%]"
+              className="invisible text-pri md:-ml-5 md:absolute  md:visible md:mt-2"
               icon={faMagnifyingGlass}
             />
           </Link>
         </div>
-        <nav className=" flex gap-20 ">
-          <Link to={""} className="">
-            <div className="">
+        <nav className=" md:flex md:gap-16  ">
+          <Link to={"/login"} className="">
+            <div className="md:flex md:flex-wrap md:gap-1">
               <FontAwesomeIcon
                 icon={faUser}
-                className=" absolute right-[45%] mt-2  text-nav md:right-[37%] md:h-7 md:mr-3"
+                className="md:h-7 md:mt-3  md:text-nav "
               />
 
-              <ul>
+              <ul className="">
                 <li className="text-log hidden md:block ">Login</li>
                 <li className="text-nav hidden md:block">Account</li>
               </ul>
             </div>
           </Link>
-          <Link to={""}>
-            <div className="">
+          <Link to={"#"}>
+            <div className=" md:flex md:flex-wrap md:gap-1">
               {" "}
               <FontAwesomeIcon
-                className=" text-nav absolute right-[35%] mt-2 md:right-[29%] md:h-7 mr-3"
+                className="md:h-7 md:mt-3  md:text-nav"
                 icon={faHeart}
               />
               <ul>
@@ -103,215 +100,85 @@ const Header = () => {
               </ul>
             </div>
           </Link>
-          <Link to={""}>
-            <div className=" flex ">
+          <Link to={"#"}>
+            <div className=" md:flex md:gap-1 ">
               <FontAwesomeIcon
-                className="text-nav absolute right-[25%] mt-2 md:right-[1%] md:mr-3 md:h-7"
+                className="md:h-7 md:mt-3  md:text-nav"
                 icon={faCartShopping}
               />
 
-              <ul>
-                <li className="text-nav hidden md:block">Total</li>
+              <ul className="">
+                <li className="text-nav hidden md:block md:ml-1">Total</li>
                 <li className="text-nav hidden md:block">0NGN</li>
               </ul>
-              <div className="w-5 h-5 flex justify-center bg-red-700 text-white text-sm rounded-xl md:-ml-16  ">
+              <div className="w-5 h-5 flex justify-center bg-red-700 text-white text-sm rounded-xl md:-ml-16 md:z-10 ">
                 0
               </div>
             </div>
           </Link>
         </nav>
-
-        <Navbars OpenMenu={OpenMenu} Open={Open} />
-        <div className="absolute bottom-4 flex flex-wrap gap-10 invisible md:visible md:text-lg">
-          <div className="text-nav">All Categories</div>
-          <div
-            onClick={() => SetIsExpanded(!isExpanded)}
-            className="mr-3 text-nav flex cursor-pointer"
-          >
-            Phone{" "}
-            {showarrow && (
-              <img src={downIcon} alt="" className=" w-4 ml-1 font-light" />
-            )}
-            {showdown && <img src={arrowIcon} alt="" className=" w-6 ml-1  " />}
-            {isExpanded && (
-              <ul className="bg-white absolute top-6 p-2 border-[1px] shadow-sm ">
-                <li className="hover:bg-pri p-2 cursor-pointer ">
-                  Mobile Phones
-                </li>
-                <li className="hover:bg-pri p-2 cursor-pointer">
-                  Top Phone Brands
-                </li>
-                <li className="hover:bg-pri p-2 cursor-pointer">
-                  Mobile Phone Accessories
-                </li>
-                <li className="hover:bg-pri p-2 cursor-pointer">
-                  Top Smartphones
-                </li>
-              </ul>
-            )}
-          </div>
-          <div
-            onClick={() => setisOpen(!isOpen)}
-            className="text-nav flex cursor-pointer"
-          >
-            Computers&Accessories{" "}
-            {open && (
-              <img src={downIcon} alt="" className=" w-4 ml-1 font-light" />
-            )}
-            {notopen && <img src={arrowIcon} alt="" className=" w-6 ml-1  " />}
-            {isOpen && (
-              <ul className="bg-white absolute top-6 p-2 border-[1px] shadow-sm ">
-                <li className="hover:bg-pri p-2 cursor-pointer ">
-                  Mobile Phones
-                </li>
-                <li className="hover:bg-pri p-2 cursor-pointer">
-                  Top Phone Brands
-                </li>
-                <li className="hover:bg-pri p-2 cursor-pointer">
-                  Mobile Phone Accessories
-                </li>
-                <li className="hover:bg-pri p-2 cursor-pointer">
-                  Top Smartphones
-                </li>
-              </ul>
-            )}
-          </div>
-          <div
-            onClick={() => SetIsExpand(!isExpand)}
-            className="text-nav flex cursor-pointer"
-          >
-            Television{" "}
-            {expand && (
-              <img src={downIcon} alt="" className=" w-4 ml-1 font-light" />
-            )}
-            {notexpand && (
-              <img src={arrowIcon} alt="" className=" w-6 ml-1  " />
-            )}
-            {isExpand && (
-              <ul className="bg-white absolute top-6 p-2 border-[1px] shadow-sm ">
-                <li className="hover:bg-pri p-2 cursor-pointer ">
-                  Mobile Phones
-                </li>
-                <li className="hover:bg-pri p-2 cursor-pointer">
-                  Top Phone Brands
-                </li>
-                <li className="hover:bg-pri p-2 cursor-pointer">
-                  Mobile Phone Accessories
-                </li>
-                <li className="hover:bg-pri p-2 cursor-pointer">
-                  Top Smartphones
-                </li>
-              </ul>
-            )}
-          </div>
-          <div
-            onClick={() => setisOpened(!isOpened)}
-            className="text-nav flex cursor-pointer"
-          >
-            Clothes{" "}
-            {opened && (
-              <img src={downIcon} alt="" className=" w-4 ml-1 font-light" />
-            )}
-            {notOpened && (
-              <img src={arrowIcon} alt="" className=" w-6 ml-1  " />
-            )}
-            {isOpened && (
-              <ul className="bg-white absolute top-6 p-2 border-[1px] shadow-sm ">
-                <li className="hover:bg-pri p-2 cursor-pointer ">
-                  Mobile Phones
-                </li>
-                <li className="hover:bg-pri p-2 cursor-pointer">
-                  Top Phone Brands
-                </li>
-                <li className="hover:bg-pri p-2 cursor-pointer">
-                  Mobile Phone Accessories
-                </li>
-                <li className="hover:bg-pri p-2 cursor-pointer">
-                  Top Smartphones
-                </li>
-              </ul>
-            )}
-          </div>
-          <div
-            onClick={() => setisClose(!isClose)}
-            className="text-nav flex cursor-pointer"
-          >
-            Shoes{" "}
-            {notClose && (
-              <img src={downIcon} alt="" className=" w-4 ml-1 font-light" />
-            )}
-            {close && <img src={arrowIcon} alt="" className=" w-6 ml-1  " />}
-            {isClose && (
-              <ul className="bg-white absolute top-6 p-2 border-[1px] shadow-sm ">
-                <li className="hover:bg-pri p-2 cursor-pointer ">
-                  Mobile Phones
-                </li>
-                <li className="hover:bg-pri p-2 cursor-pointer">
-                  Top Phone Brands
-                </li>
-                <li className="hover:bg-pri p-2 cursor-pointer">
-                  Mobile Phone Accessories
-                </li>
-                <li className="hover:bg-pri p-2 cursor-pointer">
-                  Top Smartphones
-                </li>
-              </ul>
-            )}
-          </div>
-          <div
-            onClick={() => setisClosed(!isClosed)}
-            className="text-nav flex cursor-pointer"
-          >
-            Camera & Headset{" "}
-            {notClosed && (
-              <img src={downIcon} alt="" className=" w-4 ml-1 font-light" />
-            )}
-            {closed && <img src={arrowIcon} alt="" className=" w-6 ml-1  " />}
-            {isClosed && (
-              <ul className="bg-white absolute top-6 p-2 border-[1px] shadow-sm ">
-                <li className="hover:bg-pri p-2 cursor-pointer ">
-                  Mobile Phones
-                </li>
-                <li className="hover:bg-pri p-2 cursor-pointer">
-                  Top Phone Brands
-                </li>
-                <li className="hover:bg-pri p-2 cursor-pointer">
-                  Mobile Phone Accessories
-                </li>
-                <li className="hover:bg-pri p-2 cursor-pointer">
-                  Top Smartphones
-                </li>
-              </ul>
-            )}
-          </div>
-          <div
-            onClick={() => setisShow(!isShow)}
-            className="text-nav flex cursor-pointer"
-          >
-            Smartwatch{" "}
-            {notShow && (
-              <img src={downIcon} alt="" className=" w-4 ml-1 font-light" />
-            )}
-            {show && <img src={arrowIcon} alt="" className=" w-6 ml-1  " />}
-            {isShow && (
-              <ul className="bg-white absolute top-6 p-2 border-[1px] shadow-sm ">
-                <li className="hover:bg-pri p-2 cursor-pointer ">
-                  Mobile Phones
-                </li>
-                <li className="hover:bg-pri p-2 cursor-pointer">
-                  Top Phone Brands
-                </li>
-                <li className="hover:bg-pri p-2 cursor-pointer">
-                  Mobile Phone Accessories
-                </li>
-                <li className="hover:bg-pri p-2 cursor-pointer">
-                  Top Smartphones
-                </li>
-              </ul>
-            )}
-          </div>
-        </div>
       </header>
+      <Navbars OpenMenu={OpenMenu} Open={Open} />
+      <div>
+        <ul className="md: flex md:justify-evenly md:flex-wrap  invisible md:visible md:text-base  md:p-4 ">
+          <li className="text-nav flex">
+            All Categories
+            <img
+              src={arrowIcon}
+              alt=""
+              className="md:w-5 md:ml-1 md:mt-1  font-light"
+            />
+          </li>
+          <li className="text-nav flex">
+            Phone
+            <img
+              src={arrowIcon}
+              alt=""
+              className="md:w-5 md:ml-1 md:mt-1  font-light"
+            />
+          </li>
+          <li className="text-nav flex">
+            Television
+            <img
+              src={arrowIcon}
+              alt=""
+              className="md:w-5 md:ml-1 md:mt-1  font-light"
+            />
+          </li>
+          <li className="text-nav flex">
+            Clothes
+            <img
+              src={arrowIcon}
+              alt=""
+              className="md:w-5 md:ml-1 md:mt-1  font-light"
+            />
+          </li>
+          <li className="text-nav flex">
+            Shoes
+            <img
+              src={arrowIcon}
+              alt=""
+              className="md:w-5 md:ml-1 md:mt-1  font-light"
+            />
+          </li>
+          <li className="text-nav flex">
+            Camera & Headset
+            <img
+              src={arrowIcon}
+              alt=""
+              className="md:w-5 md:ml-1 md:mt-1  font-light"
+            />
+          </li>
+          <li className="text-nav flex">
+            Smartwatch
+            <img
+              src={arrowIcon}
+              alt=""
+              className="md:w-5 md:ml-1 md:mt-1  font-light"
+            />
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };

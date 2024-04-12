@@ -12,6 +12,8 @@ import ProductPage from "./pages/productPage.jsx";
 import CartPage from "./pages/cartPage.jsx";
 import ResetPasswordPage from "./pages/resetPasswordPage.jsx";
 import UserAccount from "./pages/userAccount.jsx";
+import { AuthContextProvider } from "./components/context/authContext.jsx";
+import TestComp from "./components/login/test.jsx";
 
 const router = createBrowserRouter([
   {
@@ -26,16 +28,6 @@ const router = createBrowserRouter([
       {
         path: "/products",
         element: <ProductsPage />,
-      },
-
-      {
-        path: "/login",
-        element: <LoginPage />,
-      },
-
-      {
-        path: "/signup",
-        element: <SignupPage />,
       },
 
       {
@@ -57,12 +49,28 @@ const router = createBrowserRouter([
         path: "/user",
         element: <UserAccount />,
       },
+
+      {
+        path: "/test",
+        element: <TestComp />,
+      },
     ],
+  },
+  {
+    path: "/login",
+    element: <LoginPage />,
+  },
+
+  {
+    path: "/signup",
+    element: <SignupPage />,
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthContextProvider>
+      <RouterProvider router={router} />
+    </AuthContextProvider>
   </React.StrictMode>
 );

@@ -1,19 +1,22 @@
 import React, { useEffect, useState } from "react";
 import SpecialOfferCard from "./specialOffersCard";
+import axios from "axios";
 
 const SpecialOffer = () => {
   const [productData, setProductData] = useState([]);
 
   const fetchData = async () => {
-    const response = await fetch("https://fakestoreapi.com/products");
-
-    // // the full data
-
-    const products = await response.json();
-    setProductData(products);
+    try {
+      const response = await axios.get(
+        "https://easymart-backend-946x.onrender.com"
+      );
+      const products = await response.json();
+      setProductData(products);
+      console.log(products);
+    } catch (error) {
+      console.error("not found", error.message);
+    }
   };
-
-  //the use effect hook
 
   useEffect(() => {
     fetchData();
