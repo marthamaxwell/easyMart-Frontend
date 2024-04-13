@@ -4,6 +4,14 @@ import { useNavigate } from "react-router-dom";
 import google from "../../assets/images/google.png";
 import facebook from "../../assets/images/facebook.png";
 import apple from "../../assets/images/apple.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCartShopping,
+  faEye,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
+import image from "../../assets/images/5.png";
+import { Link } from "react-router-dom";
 
 const RegistrationForm = () => {
   const navigate = useNavigate();
@@ -12,8 +20,10 @@ const RegistrationForm = () => {
   //states for reg
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [fullname, setFullname] = useState("");
-  console.log("full name", fullname);
+  const [firstName, setFirstname] = useState("");
+  const [surname, setSurname] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+
   const [isLoading, setIsLoading] = useState(false);
   const [username, setUsername] = useState("");
 
@@ -45,89 +55,145 @@ const RegistrationForm = () => {
       .finally(() => setIsLoading(false));
   };
   return (
-    <div className="max-w-2xl mx-auto py-20">
-      <div className=" bg-white  p-5 w-full">
-        <h1 className="text-center font-semibold">Sign Up</h1>
-        <form onSubmit={handleSubmit} className="space-y-3">
-          <div className="flex flex-col space-y-1 w-full">
-            <label htmlFor="">Fullname</label>
-            <input
-              type="text"
-              placeholder="fullname"
-              required
-              value={fullname}
-              onChange={(e) => setFullname(e.target.value)}
-              className="w-full px-3 py-2 outline-none border border-gray-400 rounded-md"
-            />
-          </div>
-          <div className="flex flex-col space-y-1">
-            <label htmlFor="">Email</label>
-            <input
-              type="email"
-              placeholder="Email Here"
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-3 py-4 outline-none border border-gray-400 rounded-md"
-            />
-          </div>
+    <div className="flex justify-center items-center mx-auto h-[100vh] rounded-lg bg-white">
+      <div className="flex flex-col gap-3 mb-9 mt-11 p-10">
+        <div className="flex justify-end ">
+          <FontAwesomeIcon
+            className="text-pri mt-2 mr-[2px]"
+            icon={faCartShopping}
+          />
+          <h1 className="text-nav font-bold text-lg mb-2  md:text-2xl">
+            Easy
+            <span className="text-pri inline-block font-extrabold">.</span>
+            Mart
+          </h1>
+        </div>
+        <div className=" md:flex md:flex-wrap md:gap-24 mx-auto justify-center ">
+          <img
+            src={image}
+            className="invisible md:visible md:h-[83vh] md:w-[43%]   md:bg-gradient-to-b from-white to-[#E34614]  "
+            alt=""
+          />
 
-          <div className="flex flex-col space-y-1 w-full">
-            <label htmlFor="">Password</label>
-            <input
-              type="password"
-              placeholder="password"
-              required
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-3 py-4 outline-none border border-gray-400 rounded-md"
-            />
-          </div>
-          <div className="flex flex-col space-y-1 w-full">
-            <label htmlFor="">username</label>
-            <input
-              type="text"
-              placeholder="username"
-              required
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              className="w-full px-3 py-2 outline-none border border-gray-400 rounded-md"
-            />
-          </div>
-          <div className="">
-            <h4 className="text-center mb-3">Or Sign Up with</h4>
-            <div>
-              {/* BOTTOM ICONS WRAPPER */}
-              <div className="w-full flex gap-2">
-                <div className="w-1/3 border border-[#BDBFBE] py-2 px-4 flex items-center justify-center gap-2 rounded-md">
-                  <img src={facebook} alt="facebook" />
-                  <p>Facebook</p>
-                </div>
-                <div className="w-1/3 border border-[#BDBFBE] py-2 px-4 flex items-center justify-center gap-2 rounded-md">
-                  <img src={google} alt="google" />
-                  <p>Google</p>
-                </div>
-                <div className="w-1/3 border border-[#BDBFBE] py-2 px-4 flex items-center justify-center gap-2 rounded-md">
-                  <img src={apple} alt="apple" />
-                  <p>Apple</p>
+          <form
+            onSubmit={handleSubmit}
+            className="space-y-4 grow absolute top-[10%] left-[20%] md:relative md:left-0  "
+          >
+            <h1 className="font-bold mt-3 text-2xl">Sign Up</h1>
+            <p>
+              Creating an account gives you a more appealing shopping experience
+            </p>
+            <div className="flex gap-5 ">
+              <div className="w-2/4 relative">
+                <FontAwesomeIcon
+                  icon={faUser}
+                  className="h-5 md:h-5 mt-3  text-nav absolute bottom-5 ml-4"
+                />
+
+                <label className=" font-semibold">
+                  First Name
+                  <input
+                    type="text"
+                    placeholder="Enter First Name"
+                    required
+                    value={firstName}
+                    onChange={(e) => setFirstname(e.target.value)}
+                    className="md:w-full w-[90%] px-3 py-4 outline-none border block border-gray-400 rounded-lg placeholder:indent-8 placeholder:font-normal"
+                  />
+                </label>
+              </div>
+              <div className="w-2/4 relative">
+                <FontAwesomeIcon
+                  icon={faUser}
+                  className="h-5 md:h-5 mt-3  text-nav absolute bottom-5 ml-4"
+                />
+                <label className="font-semibold">
+                  Surname
+                  <input
+                    type="text"
+                    placeholder="Enter Surname"
+                    required
+                    value={surname}
+                    onChange={(e) => setSurname(e.target.value)}
+                    className="md:w-full w-[90%] px-3 py-4 outline-none border block border-gray-400 rounded-lg placeholder:indent-8 placeholder:font-normal"
+                  />
+                </label>
+              </div>
+            </div>
+            <div className="flex gap-5">
+              <div className="w-2/4">
+                <input
+                  type="email"
+                  placeholder="Email Here"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="md:w-full w-[90%] px-3 py-4 outline-none border block border-gray-400 rounded-lg"
+                />
+              </div>
+              <div className="w-2/4">
+                <input
+                  type="text"
+                  placeholder=" Phone Number Here"
+                  required
+                  value={phoneNumber}
+                  onChange={(e) => setPhoneNumber(e.target.value)}
+                  className="md:w-full w-[90%] px-3 py-4 outline-none border block border-gray-400 rounded-lg"
+                />
+              </div>
+            </div>
+            <div className="w-full relative">
+              <FontAwesomeIcon
+                icon={faEye}
+                className="h-5 md:h-5 mt-3  text-nav absolute bottom-5 sm:right-[8%] right-[12%] md:right-[3%]"
+              />
+              <input
+                type="password"
+                placeholder="Password Here"
+                required
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="md:w-full w-[90%] px-3 py-4 outline-none border block border-gray-400 rounded-lg "
+              />
+            </div>
+
+            <div className="">
+              <div>
+                <p className="text-nav text-center mb-3">Or Signup with</p>
+
+                {/* BOTTOM ICONS WRAPPER */}
+                <div className="w-full flex gap-2">
+                  <div className="md:w-1/3 sm:w-[40%] w-[50%] border border-[#BDBFBE] py-2 px-4 flex items-center justify-center gap-2 rounded-md">
+                    <img src={facebook} alt="facebook" />
+                    <p>Facebook</p>
+                  </div>
+                  <div className="md:w-1/3 sm:w-[40%] w-[50%] border border-[#BDBFBE] py-2 px-4 flex items-center justify-center gap-2 rounded-md">
+                    <img src={google} alt="google" />
+                    <p>Google</p>
+                  </div>
+                  <div className="md:w-1/3 sm:w-[40%] w-[50%] border border-[#BDBFBE] py-2 px-4 flex items-center justify-center gap-2 rounded-md">
+                    <img src={apple} alt="apple" />
+                    <p>Apple</p>
+                  </div>
                 </div>
               </div>
             </div>
-            <p className=" text-center mt-3">
+            <h4 className="text-center font-bold ">
               Already have an account?{" "}
-              <span className="text-red-500">Login</span>
-            </p>
-          </div>
-
-          <button
-            disabled={isLoading}
-            type="submit"
-            className="bg-pri px-5 py-2 text-white rounded-md w-full font-medium flex justify-between items-center disabled:opacity-40 disabled:cursor-not-allowed mt-32s"
-          >
-            <p className="flex-grow text-center">Create Account</p>
-            <span className="text-3xl">&rarr;</span>
-          </button>
-        </form>
+              <Link to="/login">
+                <span className="text-pri font-normal">Login </span>
+              </Link>
+            </h4>
+            <button
+              disabled={isLoading}
+              type="submit"
+              className="bg-pri px-5 py-2 text-white rounded-lg md:w-full w-[90%]  font-medium flex justify-between items-center disabled:opacity-40 disabled:cursor-not-allowed mt-32s "
+            >
+              <p className="flex-grow text-center">Create Account</p>
+              <span className="text-3xl">&rarr;</span>
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );

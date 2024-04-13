@@ -40,13 +40,13 @@ const Header = () => {
   };
 
   return (
-    <div className=" drop-shadow-lg">
-      <header className="flex md: flex-wrap md:justify-center md:gap-8 md:h-30  relative md:p-4 justify-center p-5  ">
+    <div className="p-3 shadow-lg ">
+      <header className="flex flex-wrap md:justify-center md:gap-8  relative md:p-4    ">
         <div>
           <FontAwesomeIcon
             icon={faBars}
             onClick={OpenMenu}
-            className=" lg:hidden absolute right-[5%] mt-2 text-nav"
+            className=" md:hidden lg:hidden absolute right-[5%] mt-2 text-nav"
           />
         </div>
         <div className="flex ">
@@ -73,45 +73,45 @@ const Header = () => {
             />
           </Link>
         </div>
-        <nav className=" md:flex md:gap-16  ">
+        <nav className="flex mt-6 md:mt-0 sm:mt-0 justify-center gap-10 flex-wrap md:gap-16  ">
           <Link to={"/login"} className="">
-            <div className="md:flex md:flex-wrap md:gap-1">
+            <div className="flex flex-wrap gap-1">
               <FontAwesomeIcon
                 icon={faUser}
-                className="md:h-7 md:mt-3  md:text-nav "
+                className="h-5 md:h-7 mt-3  text-nav "
               />
 
               <ul className="">
-                <li className="text-log hidden md:block ">Login</li>
-                <li className="text-nav hidden md:block">Account</li>
+                <li className="text-log md:block ">Login</li>
+                <li className="text-nav md:block">Account</li>
               </ul>
             </div>
           </Link>
           <Link to={"#"}>
-            <div className=" md:flex md:flex-wrap md:gap-1">
+            <div className=" flex flex-wrap gap-1">
               {" "}
               <FontAwesomeIcon
-                className="md:h-7 md:mt-3  md:text-nav"
+                className="h-5  md:h-7 mt-3  text-nav"
                 icon={faHeart}
               />
               <ul>
-                <li className="text-nav hidden md:block">Favourite</li>
-                <li className="text-nav hidden md:block">List</li>
+                <li className="text-nav md:block">Favourite</li>
+                <li className="text-nav md:block">List</li>
               </ul>
             </div>
           </Link>
           <Link to={"#"}>
-            <div className=" md:flex md:gap-1 ">
+            <div className=" flex gap-1 ">
               <FontAwesomeIcon
-                className="md:h-7 md:mt-3  md:text-nav"
+                className="h-5 md:h-7 mt-3  text-nav"
                 icon={faCartShopping}
               />
 
               <ul className="">
-                <li className="text-nav hidden md:block md:ml-1">Total</li>
-                <li className="text-nav hidden md:block">0NGN</li>
+                <li className="text-nav md:block md:ml-1">Total</li>
+                <li className="text-nav md:block">0NGN</li>
               </ul>
-              <div className="w-5 h-5 flex justify-center bg-red-700 text-white text-sm rounded-xl md:-ml-16 md:z-10 ">
+              <div className="w-5 h-5 flex justify-center bg-red-700 text-white text-sm rounded-xl md:-ml-16 z-10 md:visible invisible ">
                 0
               </div>
             </div>
