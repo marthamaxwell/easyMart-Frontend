@@ -1,5 +1,5 @@
 import React from "react";
-import heroBanner from "../../assets/images/hero-banner.png";
+import heroBanner from "../../../assets/images/hero-banner.png";
 const Flyer = () => {
   return (
     <div>

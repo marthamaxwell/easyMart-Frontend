@@ -8,8 +8,8 @@ const NewProducts = () => {
   const [newData, setNewData] = useState([]);
   const fetchData = async () => {
     try {
-      const response = await fetch(
-        "https://easymart-backend-946x.onrender.com/product/getProducts"
+      const response = await axios.get(
+        "https://easymart-backend-946x.onrender.com/product/new"
       );
       const products = await response.json();
       setNewData(products);
@@ -29,7 +29,6 @@ const NewProducts = () => {
       ))}
     </div>
   );
-  //the use effect hook
 };
 
 export default NewProducts;

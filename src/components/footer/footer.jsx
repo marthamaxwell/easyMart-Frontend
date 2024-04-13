@@ -58,7 +58,7 @@ const Footer = () => {
         <img className="mb-3" src={frame} alt="" />
         <img src={frame1} alt="" />
       </div>
-      <div className="text-white md:absolute top-[60%] md:left-[10%]">
+      <div className="text-white md:absolute top-[65%] md:left-[10%]">
         <h3 className="uppercase">payment methods and delivery patterns</h3>
         <div className="flex gap-4">
           <img src={frame2} alt="" />
@@ -67,7 +67,7 @@ const Footer = () => {
           <img src={frame5} alt="" />
         </div>
       </div>
-      <p className="text-white md:absolute md:bottom-[5%] md:left-[40%]">
+      <p className="text-white md:absolute md:bottom-[2%] md:left-[40%]">
         copyright@2024 EazyMart.com. All Rights Reserved
       </p>
     </div>

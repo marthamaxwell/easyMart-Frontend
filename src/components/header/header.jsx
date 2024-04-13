@@ -40,8 +40,8 @@ const Header = () => {
   };
 
   return (
-    <div className="">
-      <header className="flex md: flex-wrap md:justify-center md:gap-8 md:h-30  relative md:p-4 justify-center p-5 ">
+    <div className=" drop-shadow-lg">
+      <header className="flex md: flex-wrap md:justify-center md:gap-8 md:h-30  relative md:p-4 justify-center p-5  ">
         <div>
           <FontAwesomeIcon
             icon={faBars}
