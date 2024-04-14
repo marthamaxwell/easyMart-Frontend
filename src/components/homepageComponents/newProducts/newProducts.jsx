@@ -24,7 +24,7 @@ const NewProducts = () => {
   }, []);
 
   return (
-    <div className="w-full bg-pri pb-5 ">
+    <div className="w-full bg-pri pb-8 ">
       <div className=" flex flex-wrap justify-center md:justify-between w-[80%] mx-auto  ">
         {newData.slice(0, 4).map((products) => (
           <NewProductCard key={products?.id} miles={products} />
