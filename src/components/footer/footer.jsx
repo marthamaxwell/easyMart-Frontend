@@ -38,7 +38,7 @@ const Footer = () => {
 
       <div className="text-white mt-4 md:mt-0 ">
         <h3 className="uppercase font-bold mb-3">Follow Us</h3>
-        <ul className="flex flex-col flex-wrap gap-3">
+        <ul className="flex flex-col  gap-3">
           <li>
             <FontAwesomeIcon icon={faFacebook} />
           </li>
@@ -60,7 +60,7 @@ const Footer = () => {
       </div>
       <div className="text-white md:absolute top-[65%] md:left-[8%] mt-4 md:mt-0">
         <h3 className="uppercase">payment methods and delivery patterns</h3>
-        <div className="flex gap-4">
+        <div className="flex flex-wrap gap-4 mt-3">
           <img src={frame2} alt="" />
           <img src={frame3} alt="" />
           <img src={frame4} alt="" />
