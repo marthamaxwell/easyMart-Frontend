@@ -47,17 +47,19 @@ const LoginForm = () => {
   return (
     <div className="flex justify-center items-center mx-auto h-[100vh] rounded-lg bg-white">
       <div className="flex flex-col gap-3 mb-9 mt-11">
-        <div className="flex justify-end ">
-          <FontAwesomeIcon
-            className="text-pri mt-2 mr-[2px]"
-            icon={faCartShopping}
-          />
-          <h1 className="text-nav font-bold text-lg mb-2  md:text-2xl">
-            Easy
-            <span className="text-pri inline-block font-extrabold">.</span>
-            Mart
-          </h1>
-        </div>
+        <Link to={"/"}>
+          <div className="flex justify-end ">
+            <FontAwesomeIcon
+              className="text-pri mt-2 mr-[2px]"
+              icon={faCartShopping}
+            />
+            <h1 className="text-nav font-bold text-lg mb-2  md:text-2xl">
+              Easy
+              <span className="text-pri inline-block font-extrabold">.</span>
+              Mart
+            </h1>
+          </div>
+        </Link>
         <div className=" md:flex md:flex-wrap md:gap-24 mx-auto justify-center ">
           <img
             src={image}
