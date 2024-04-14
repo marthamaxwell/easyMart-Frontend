@@ -6,7 +6,7 @@ const CollectionCard = ({ property }) => {
     <div className="my-6">
       <div>
         {/* background and img div */}
-        <div className="bg-gradient-to-t from-red-500 to-pri w-64 p-5 h-80 rounded-lg">
+        <div className="bg-gradient-to-t from-red-500 to-pri w-64 p-5 h-80 rounded-lg hover:translate-y-1 hover:drop-shadow-lg">
           <img src={property.image} className="mt-12" alt="" />
         </div>
 
