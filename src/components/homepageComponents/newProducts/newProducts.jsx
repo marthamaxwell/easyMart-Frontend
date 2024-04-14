@@ -8,25 +8,28 @@ const NewProducts = () => {
   const [newData, setNewData] = useState([]);
   const fetchData = async () => {
     try {
-      const response = await axios.get(
-        "https://easymart-backend-946x.onrender.com/product/new"
-      );
-      const products = await response.json();
+      const response = await axios.get("http://localhost:4000/new", {
+        withCredentials: true,
+      });
+      const products = await response.data.product;
       setNewData(products);
-      console.log(products);
+      console.log("popular data", newData);
     } catch (error) {
-      console.error("not found", error.message);
+      console.error(error.message);
     }
-
-    useEffect(() => {
-      fetchData();
-    }, []);
   };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
-    <div className="flex max-sm:flex-wrap">
-      {newData?.map((products) => (
-        <NewProductCard key={products?.id} miles={products} />
-      ))}
+    <div className="w-full bg-pri pb-5 ">
+      <div className=" flex flex-wrap justify-center md:justify-between w-[80%] mx-auto  ">
+        {newData.slice(0, 4).map((products) => (
+          <NewProductCard key={products?.id} miles={products} />
+        ))}
+      </div>
     </div>
   );
 };
