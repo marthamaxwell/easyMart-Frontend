@@ -15,8 +15,8 @@ import frame5 from "../../assets/images/4.png";
 
 const Footer = () => {
   return (
-    <div className="flex flex-wrap gap-3 justify-around bg-dark h-[450px] p-4 relative  md:flex">
-      <div className="text-white">
+    <div className="flex flex-wrap gap-3 justify-around bg-dark h-500px  md:h-[450px] p-4 relative  md:flex">
+      <div className="text-white mt-4 md:mt-0">
         <h3 className="uppercase font-bold mb-3">About</h3>
         <ul className="flex flex-col gap-3">
           <li className="">About Us </li>
@@ -25,7 +25,7 @@ const Footer = () => {
           <li>Flash Sales </li>
         </ul>
       </div>
-      <div className="text-white">
+      <div className="text-white mt-4 md:mt-0">
         {" "}
         <h3 className="uppercase font-bold mb-3">Need Help?</h3>
         <ul className="flex flex-col gap-3">
@@ -36,7 +36,7 @@ const Footer = () => {
         </ul>
       </div>
 
-      <div className="text-white ">
+      <div className="text-white mt-4 md:mt-0 ">
         <h3 className="uppercase font-bold mb-3">Follow Us</h3>
         <ul className="flex flex-col gap-3">
           <li>
@@ -53,12 +53,12 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <div className="text-white uppercase font-bold">
+      <div className="text-white uppercase font-bold mt-4 md:mt-0">
         <h3 className="mb-3">DOWNLOAD APP</h3>
         <img className="mb-3" src={frame} alt="" />
         <img src={frame1} alt="" />
       </div>
-      <div className="text-white md:absolute top-[65%] md:left-[10%]">
+      <div className="text-white md:absolute top-[65%] md:left-[10%] mt-4 md:mt-0">
         <h3 className="uppercase">payment methods and delivery patterns</h3>
         <div className="flex gap-4">
           <img src={frame2} alt="" />
@@ -67,7 +67,7 @@ const Footer = () => {
           <img src={frame5} alt="" />
         </div>
       </div>
-      <p className="text-white md:absolute md:bottom-[2%] md:left-[40%]">
+      <p className="text-white md:absolute md:bottom-[2%] md:left-[40%] mt-4 md:mt-0">
         copyright@2024 EazyMart.com. All Rights Reserved
       </p>
     </div>

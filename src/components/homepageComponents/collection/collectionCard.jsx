@@ -1,7 +1,7 @@
 import React from "react";
 
 const CollectionCard = ({ property }) => {
-  console.log("properties:", property);
+  // console.log("properties:", property);
   return (
     <div className="my-6">
       <div>

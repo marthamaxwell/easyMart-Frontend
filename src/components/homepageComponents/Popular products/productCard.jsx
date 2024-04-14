@@ -1,32 +1,39 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping, faHeart } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCartShopping,
+  faHeart,
+  faNairaSign,
+} from "@fortawesome/free-solid-svg-icons";
 import heart from "../../../assets/svg/heart.svg";
 
 const ProductCard = ({ miles }) => {
-  console.log("props from products =>", miles);
   return (
-    <div class="w-4/5 h-80 mt-8   mx-auto px-4 ">
+    <div class="  ">
       <Link to={`product/${miles.id}`}>
-        <div class="bg-card rounded-lg w-[220px] h-[300px] p-3 relative mt-4">
-          <img src={miles.image} className="w-60 mx-auto h-40 mb-4" />
+        <div class="bg-card rounded-lg w-[220px] h-[340px] p-3 relative mt-4">
+          <img src={miles.image} className=" mx-auto rounded-md h-52 mb-4" />
           <div className="">
-            <p className="absolute top-8 bg-sm w-[80px] text-center rounded-xl text-pri font-normal text-base p-1">
+            <p className="absolute top-4 bg-sm w-[80px] text-center rounded-2xl text-pri font-normal text-base p-[0.5px] ml-1">
               Popular{" "}
             </p>
             <span className="">
               <img
                 src={heart}
-                className="h-4 absolute right-[5%] top-[15%] font-"
+                className="h-4 absolute right-[7%] top-6 font-"
               />
             </span>
 
-            <h4 className="mb-2">{miles.title} </h4>
-            <p className="block">
-              {miles.price} {miles.rating.count}
+            <h4 className="">{miles.title} </h4>
+            <p className="text-pri font-semibold">
+              <FontAwesomeIcon className="b" icon={faNairaSign} />
+              {miles.price}{" "}
+            </p>
+            <p className="">
+              {miles.rating}
               <span class="float-right ">
-                <FontAwesomeIcon className="block" icon={faCartShopping} />
+                <FontAwesomeIcon className="block ml-8" icon={faCartShopping} />
                 Add to cart
               </span>
             </p>

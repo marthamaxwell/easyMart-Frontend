@@ -25,7 +25,10 @@ const TheFooter = () => {
 
         <div className="flex flex-wrap  gap-3 ">
           <div className="">
-            <FontAwesomeIcon icon={faMessage} className="text-nav h-5 mt-3" />
+            <FontAwesomeIcon
+              icon={faMessage}
+              className="text-nav h-5 mt-3 invisible md:visible"
+            />
           </div>
           <div>
             <h1 className="font-bold text-md text-nav uppercase">

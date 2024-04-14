@@ -7,12 +7,12 @@ const Products = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get(
-        "https://easymart-backend-946x.onrender.com/product/popular"
-      );
-      const products = await response.json();
+      const response = await axios.get("http://localhost:4000/popular", {
+        withCredentials: true,
+      });
+      const products = await response.data.product;
       setPopularData(products);
-      console.log(products);
+      console.log("popular data", popularData);
     } catch (error) {
       console.error(error.message);
     }
@@ -23,8 +23,8 @@ const Products = () => {
   }, []);
 
   return (
-    <div className="flex w-11/12 mx-auto max-sm:flex-wrap">
-      {popularData?.slice(0, 4).map((products) => (
+    <div className=" flex flex-wrap justify-center md:justify-between w-[80%] mx-auto mt-5">
+      {popularData.slice(0, 4).map((products) => (
         <ProductCard key={products?.id} miles={products} />
       ))}
     </div>
