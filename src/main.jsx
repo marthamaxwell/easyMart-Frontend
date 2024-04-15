@@ -11,9 +11,10 @@ import SignupPage from "./pages/signupPage.jsx";
 import ProductPage from "./pages/productPage.jsx";
 import CartPage from "./pages/cartPage.jsx";
 import ResetPasswordPage from "./pages/resetPasswordPage.jsx";
-import UserAccount from "./pages/userAccount.jsx";
+
 import { AuthContextProvider } from "./components/context/authContext.jsx";
 import TestComp from "./components/login/test.jsx";
+import AdminPage from "./pages/AdminPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -41,11 +42,6 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "/user",
-        element: <UserAccount />,
-      },
-
-      {
         path: "/test",
         element: <TestComp />,
       },
@@ -59,6 +55,11 @@ const router = createBrowserRouter([
   {
     path: "/signup",
     element: <SignupPage />,
+  },
+
+  {
+    path: "/admin",
+    element: <AdminPage />,
   },
 ]);
 

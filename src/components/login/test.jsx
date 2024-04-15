@@ -1,6 +1,7 @@
 import React from "react";
 import { useAuthContext } from "../context/authContext";
 import TheFooter from "../footer/2ndfooter";
+import { Link } from "react-router-dom";
 
 const TestComp = () => {
   const { userDetails, error, message } = useAuthContext();
@@ -25,9 +26,9 @@ const TestComp = () => {
               Name: {userDetails?.name}
             </p>
             <p className="text-gray-400">Email: {userDetails?.email}</p>
-            <p className="uppercase  font-medium text-pri">
+            {/* <p className="uppercase  font-medium text-pri">
               Admin: {userDetails?.isAdmin ? "Admin" : "User"}
-            </p>
+            </p> */}
           </div>
           <div className="text-center">
             <button className="bg-pri w-24 mt-8  h-8 text-white rounded-lg hover:bg-orange-600   text-lg">
@@ -36,7 +37,7 @@ const TestComp = () => {
           </div>
         </div>
       )}
-      {error === false && <div>Please login to see</div>}
+      {error === false && <Link to={"/login"}>Please login to see</Link>}
       <TheFooter />
     </div>
   );

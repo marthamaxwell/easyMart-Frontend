@@ -1,53 +1,9 @@
-import React, { useState } from "react";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
-import image from "../../assets/images/5.png";
-
-import google from "../../assets/images/google.png";
-import facebook from "../../assets/images/facebook.png";
-import apple from "../../assets/images/apple.png";
+import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faEye } from "@fortawesome/free-solid-svg-icons";
 
-const LoginForm = () => {
-  const navigate = useNavigate();
-  // const base_url = import.meta.env.VITE_API_BASE_URL;
-  const base_url = "http://localhost:4000";
-
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-
-  //axios with credentials
-  axios.defaults.withCredentials = true;
-
-  // handle submit
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsLoading(true);
-    axios
-      .post(`${base_url}/user/login`, {
-        email: email,
-        password: password,
-      })
-      .then((res) => {
-        console.log("the login sussess response => ", res);
-        if (res.data.success) {
-          if (res.data.user.admin) {
-            navigate("/admin");
-          } else {
-            navigate("/test");
-          }
-        }
-      })
-      .catch((error) => {
-        if (error instanceof axios.AxiosError) {
-          console.log("the error => ", error?.response?.data);
-        }
-      })
-      .finally(() => setIsLoading(false));
-  };
+const AdminPage = () => {
   return (
     <div className="flex justify-center items-center mx-auto h-[100vh] rounded-lg bg-white">
       <div className="flex flex-col gap-3 mb-9 mt-11">
@@ -66,7 +22,7 @@ const LoginForm = () => {
         </Link>
         <div className=" md:flex md:flex-wrap md:gap-24 mx-auto justify-center ">
           <img
-            src={image}
+            src=""
             className="invisible shrink md:visible md:h-[70vh] md:w-[40%]   md:bg-gradient-to-b from-white to-[#E34614]  "
             alt=""
           />
@@ -111,7 +67,7 @@ const LoginForm = () => {
             </button>
 
             <div className="">
-              <h4 className="text-center md:text-left">
+              <h4 clas-Name="text-center md:text-left">
                 Dont have an account?{" "}
                 <Link to="/signup">
                   <span className="text-pri">Sign Up </span>
@@ -119,7 +75,6 @@ const LoginForm = () => {
               </h4>
               <div>
                 <p className="text-nav text-center mb-3">Or Login with</p>
-
                 {/* BOTTOM ICONS WRAPPER */}
                 <div className="w-2/3 flex gap-2">
                   <div className="md:w-1/3 sm:w-[40%] w-[50%] border border-[#BDBFBE] py-2 px-4 flex items-center justify-center gap-2 rounded-md">
@@ -135,6 +90,7 @@ const LoginForm = () => {
                     <p>Apple</p>
                   </div>
                 </div>
+                ]{" "}
               </div>
             </div>
           </form>
@@ -144,4 +100,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default AdminPage;
