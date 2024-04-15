@@ -129,6 +129,8 @@ const AdminPage = () => {
                 className="w-[100%] p-4 outline-none border rounded-lg "
                 value={rating}
                 onChange={(e) => setRating(e.target.value)}
+                max={5}
+                min={0}
               />
             </div>
 
