@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 const RegistrationForm = () => {
   const navigate = useNavigate();
   // const base_url = import.meta.env.VITE_API_BASE_URL;
-  const base_url = "http://localhost:4000";
+  const base_url = "https://easymart-backend-946x.onrender.com";
   //states for reg
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
