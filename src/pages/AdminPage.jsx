@@ -46,7 +46,7 @@ const AdminPage = () => {
   return (
     <div>
       <Link to={"/"}>
-        <div className="flex justify-center ">
+        <div className="flex justify-end w-[50%] mx-auto p-8 ">
           <FontAwesomeIcon
             className="text-pri mt-2 mr-[2px]"
             icon={faCartShopping}
@@ -58,7 +58,7 @@ const AdminPage = () => {
           </h1>
         </div>
       </Link>
-      <div className="bg-pri w-[50vw] pb-20 ml-auto self-center mr-auto mt-24 p-4 rounded-md">
+      <div className="bg-pri w-[50vw] pb-20 ml-auto self-center mr-auto  p-4 rounded-md">
         {/*form login section */}
         <form
           action=""
