@@ -151,7 +151,7 @@ const AdminPage = () => {
               }
               type="submit"
             >
-              Create product
+              Create
             </button>
           </div>
           {/*this is the query section */}
