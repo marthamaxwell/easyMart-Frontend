@@ -7,9 +7,12 @@ const SpecialOffer = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/product/offer", {
-        withCredentials: true,
-      });
+      const response = await axios.get(
+        "https://easymart-backend-946x.onrender.com/product/offer",
+        {
+          withCredentials: true,
+        }
+      );
       const products = await response.data.product;
       setOfferData(products);
       console.log("popular data", offerData);

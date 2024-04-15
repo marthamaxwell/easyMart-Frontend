@@ -14,13 +14,16 @@ const AdminPage = () => {
     e.preventDefault();
     setIsLoading(true);
     axios
-      .post("http://localhost:4000/product/createProduct", {
-        title: productName,
-        rating: rating,
-        price: price,
-        image: image,
-        category: category,
-      })
+      .post(
+        "https://easymart-backend-946x.onrender.com/product/createProduct",
+        {
+          title: productName,
+          rating: rating,
+          price: price,
+          image: image,
+          category: category,
+        }
+      )
       .then((res) => {
         console.log("the product added response => ", res);
         setProductName("");

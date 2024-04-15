@@ -8,7 +8,7 @@ const Products = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:4000/product/popular",
+        "https://easymart-backend-946x.onrender.com/product/popular",
         {
           withCredentials: true,
         }
