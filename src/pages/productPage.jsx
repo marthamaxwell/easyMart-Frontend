@@ -1,27 +1,26 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import axios from "axios";
 
 const ProductsPage = () => {
-  const { id } = useParams();
+  const { productId } = useParams();
 
-  console.log("the params =>", id);
-  const [popularData, setPopularData] = useState();
-  console.log("products coming from state =>", popularData);
-
-  const fetchData = async () => {
-    try {
-      const response = await axios.get(`http://localhost:4000/popular/${id}`, {
-        withCredentials: true,
-      });
-      const products = await response.data.product;
-      setPopularData(products);
-      console.log(popularData);
-    } catch (error) {
-      console.error(error.message);
-    }
-  };
-
+  console.log("the params =>", productId);
+  const [product, setProduct] = useState();
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          `http://localhost:4000/product/${productId}`
+        );
+        const products = response.data.product;
+        setProduct(products);
+        console.log(products);
+      } catch (error) {
+        console.log(error.message);
+      }
+    };
+
     fetchData();
   }, []);
 };

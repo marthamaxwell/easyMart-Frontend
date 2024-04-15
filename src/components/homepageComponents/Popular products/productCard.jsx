@@ -11,7 +11,7 @@ import heart from "../../../assets/svg/heart.svg";
 const ProductCard = ({ miles }) => {
   return (
     <div class="  ">
-      <Link to={`product/${miles.id}`}>
+      <Link to={`singleProduct/${miles._id}`}>
         <div class="bg-card rounded-lg w-[220px] h-[340px] p-3 relative mt-4 hover:translate-y-2 hover:drop-shadow-lg">
           <img src={miles.image} className=" mx-auto rounded-md h-52 mb-4" />
           <div className="">

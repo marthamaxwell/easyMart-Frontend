@@ -7,7 +7,7 @@ const SpecialOffer = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/offer", {
+      const response = await axios.get("http://localhost:4000/product/offer", {
         withCredentials: true,
       });
       const products = await response.data.product;

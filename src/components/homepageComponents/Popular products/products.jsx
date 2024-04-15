@@ -7,9 +7,12 @@ const Products = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/popular", {
-        withCredentials: true,
-      });
+      const response = await axios.get(
+        "http://localhost:4000/product/popular",
+        {
+          withCredentials: true,
+        }
+      );
       const products = await response.data.product;
       setPopularData(products);
       console.log("popular data", popularData);

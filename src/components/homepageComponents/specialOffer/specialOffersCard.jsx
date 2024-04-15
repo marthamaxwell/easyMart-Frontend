@@ -11,17 +11,17 @@ import {
 const SpecialOfferCard = ({ miles }) => {
   return (
     <div class="  ">
-      <Link to={`product/${miles.id}`}>
+      <Link to={`singleProduct/${miles._id}`}>
         <div class="bg-card rounded-lg w-[220px] h-[340px] p-3 relative mt-4 hover:translate-y-2 hover:drop-shadow-lg">
           <img src={miles.image} className=" mx-auto rounded-md h-52 mb-4" />
           <div className="">
-            <p className="absolute top-4 bg-sm w-[80px] text-center rounded-2xl text-pri font-normal text-base p-[0.5px] ml-1">
-              Popular{" "}
+            <p className="absolute top-4 bg-sm w-[50px] text-center rounded-2xl text-pri font-normal text-base p-[0.5px] ml-1">
+              -48%{" "}
             </p>
             <span className="">
               <FontAwesomeIcon
                 icon={faHeart}
-                className="h-4 absolute right-[7%] top-6 font-bold text-white"
+                className="h-4 absolute right-[7%] top-6 font-bold text-pri"
               />
             </span>
 

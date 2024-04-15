@@ -8,7 +8,7 @@ const NewProducts = () => {
   const [newData, setNewData] = useState([]);
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/new", {
+      const response = await axios.get("http://localhost:4000/product/new", {
         withCredentials: true,
       });
       const products = await response.data.product;
