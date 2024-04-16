@@ -47,9 +47,9 @@ const TheFooter = () => {
           <input
             type="text"
             placeholder="Email Address"
-            className="border-2 rounded-l-md border-white h-10 outline-none indent-4 mt-2 w-60"
+            className="border-2 rounded-md md:rounded-l-md md:rounded-r-none sm:rounded-r-none sm:rounded-l-md border-white h-10 outline-none indent-4 mt-2 md:w-60 w-40 sm:60"
           />
-          <button className="bg-pri w-32 mr-8 h-10 text-white rounded-r-md hover:bg-orange-700 ">
+          <button className="bg-pri w-32 mr-8 h-10 text-white rounded-md md:rounded-r-md md:rounded-l-none sm:rounded-l-none  sm:rounded-r-md hover:bg-orange-700 mt-3 md:mt-0 sm:mt-0">
             Subscribe
           </button>
         </div>
