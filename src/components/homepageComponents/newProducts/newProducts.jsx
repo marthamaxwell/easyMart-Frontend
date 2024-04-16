@@ -16,7 +16,7 @@ const NewProducts = () => {
       );
       const products = await response.data.product;
       setNewData(products);
-      console.log("popular data", newData);
+      // console.log("popular data", newData);
     } catch (error) {
       console.error(error.message);
     }

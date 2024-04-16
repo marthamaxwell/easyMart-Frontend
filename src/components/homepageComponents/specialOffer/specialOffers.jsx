@@ -15,7 +15,7 @@ const SpecialOffer = () => {
       );
       const products = await response.data.product;
       setOfferData(products);
-      console.log("popular data", offerData);
+      // console.log("popular data", offerData);
     } catch (error) {
       console.error(error.message);
     }

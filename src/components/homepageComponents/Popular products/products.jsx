@@ -15,7 +15,7 @@ const Products = () => {
       );
       const products = await response.data.product;
       setPopularData(products);
-      console.log("popular data", popularData);
+      // console.log("popular data", popularData);
     } catch (error) {
       console.error(error.message);
     }
