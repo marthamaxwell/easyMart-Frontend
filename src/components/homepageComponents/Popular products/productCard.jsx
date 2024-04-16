@@ -27,8 +27,11 @@ const ProductCard = ({ miles }) => {
 
             <h4 className="">{miles.title} </h4>
             <p className="text-pri font-semibold">
-              <FontAwesomeIcon className="b" icon={faNairaSign} />
-              {miles.price}{" "}
+              {/* <FontAwesomeIcon className="b" icon={faNairaSign} /> */}
+              {miles.price.toLocaleString("en-NG", {
+                style: "currency",
+                currency: "NGN",
+              })}{" "}
             </p>
             <p className="">
               {miles.rating}

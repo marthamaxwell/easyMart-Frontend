@@ -45,7 +45,7 @@ const ProductsPage = () => {
           </h2>
           <hr />
           <h1 className="text-2xl font-bold text-orange-500">
-            NGN{singleProduct.price}
+            {singleProduct.price}
           </h1>
           <s className="-mt-2 font-semibold text-gray-500">NGN 4,000</s>
           <hr />
