@@ -8,7 +8,7 @@ export const useAuthContext = () => {
 };
 
 export const AuthContextProvider = ({ children }) => {
-  const base_url = "http://localhost:4000";
+  const base_url = "https://easymart-backend-946x.onrender.com";
   const [message, setMessage] = useState("");
   const [userDetails, setUserDetails] = useState(null);
   const [loading, setLoading] = useState(true);
