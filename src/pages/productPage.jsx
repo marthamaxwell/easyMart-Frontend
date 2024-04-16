@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { faShoppingCart, faNairaSign } from "@fortawesome/free-solid-svg-icons";
 
 const ProductsPage = () => {
   const { productId } = useParams();
@@ -55,7 +55,7 @@ const ProductsPage = () => {
           <section className=" flex gap-6">
             <label className="text-gray-500">Quantity</label>
             {/* This is the quantity selection section */}
-            <div className="flex gap-0 shadow-xl ">
+            <div className="flex gap-0 shadow-lg ">
               <button
                 className="w-8 rounded-l-lg text-center py-1 px-1 text-gray-500 bg-gray-100 hover:bg-gray-300"
                 onClick={() => {
@@ -81,7 +81,11 @@ const ProductsPage = () => {
             <p>Price excludes shipping fee</p>
           </div>
           <div className=" bg-orange-200 w-fit py-1 px-2 md:py-3 md:px-5 rounded-xl">
-            <p>Free delivery available for purchases above NGN10,000</p>
+            <p>
+              Coupons available for purchases above{" "}
+              {/* <FontAwesomeIcon className="b" icon={faNairaSign} /> */}
+              NGN100,000
+            </p>
           </div>
           <div className="w-full h-16 rounded-xl hover:cursor-pointer hover:bg-[rgba(300,136,49,0.9)] bg-[rgba(255,136,49,1)] flex items-center text-center">
             <Link className=" w-full  m-auto font-semibold text-2xl flex justify-center text-white">
