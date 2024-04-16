@@ -101,7 +101,7 @@ const RegistrationForm = () => {
                     required
                     value={firstName}
                     onChange={(e) => setFirstname(e.target.value)}
-                    className="md:w-full w-[90%] px-3 py-4 outline-none border block border-gray-400 rounded-lg placeholder:indent-8 placeholder:font-normal"
+                    className="md:w-full w-[90%] px-3 py-4 outline-none border block border-gray-400 rounded-lg indent-8 placeholder-shown: placeholder:font-normal"
                   />
                 </label>
               </div>
@@ -118,7 +118,7 @@ const RegistrationForm = () => {
                     required
                     value={surname}
                     onChange={(e) => setSurname(e.target.value)}
-                    className="md:w-full w-[90%] px-3 py-4 outline-none border block border-gray-400 rounded-lg placeholder:indent-8 placeholder:font-normal"
+                    className="md:w-full w-[90%] px-3 py-4 outline-none border block border-gray-400 rounded-lg indent-8 placeholder:font-normal"
                   />
                 </label>
               </div>
