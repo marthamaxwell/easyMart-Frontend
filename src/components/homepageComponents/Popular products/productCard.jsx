@@ -5,10 +5,24 @@ import {
   faCartShopping,
   faHeart,
   faNairaSign,
+  faStar,
 } from "@fortawesome/free-solid-svg-icons";
 import heart from "../../../assets/svg/heart.svg";
 
 const ProductCard = ({ miles }) => {
+  const ratingStars = () => {
+    const stars = [];
+    for (let i = 0; i < miles.rating; i++) {
+      stars.push(
+        <FontAwesomeIcon
+          icon={faStar}
+          key={i}
+          className="text-sm text-orange-600"
+        />
+      );
+    }
+    return stars;
+  };
   return (
     <div class="  ">
       <Link to={`singleProduct/${miles._id}`}>
@@ -35,6 +49,7 @@ const ProductCard = ({ miles }) => {
             </p>
             <p className="">
               {miles.rating}
+              {ratingStars()}
               <span class="float-right ">
                 <FontAwesomeIcon className="block ml-8" icon={faCartShopping} />
                 Add to cart
