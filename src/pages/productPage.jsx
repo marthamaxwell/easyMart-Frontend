@@ -36,7 +36,7 @@ const ProductsPage = () => {
         <img
           src={singleProduct.image}
           alt="Product"
-          className="w-[30vw] mx-auto "
+          className="w-[30vw] mx-auto rounded-xl"
         />
         {/* This is the checkout details section */}
         <div className="flex flex-col gap-6 px-2 w-auto text-left">
@@ -45,7 +45,10 @@ const ProductsPage = () => {
           </h2>
           <hr />
           <h1 className="text-2xl font-bold text-orange-500">
-            {singleProduct.price}
+            {parseFloat(singleProduct.price).toLocaleString("en-NG", {
+              style: "currency",
+              currency: "NGN",
+            })}
           </h1>
           <s className="-mt-2 font-semibold text-gray-500">NGN 4,000</s>
           <hr />
