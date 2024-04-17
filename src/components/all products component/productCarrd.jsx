@@ -19,7 +19,7 @@ const ProductCard = ({ image, price, title, rating, _id }) => {
   };
 
   return (
-    <div class="  ">
+    <div class="mb-12  ">
       <Link to={`singleProduct/${_id}`}>
         <div class="bg-card rounded-lg w-[220px] h-[350px] p-3 relative mt-4 hover:translate-y-2 hover:drop-shadow-lg">
           <img src={image} className=" mx-auto rounded-md h-52 mb-4" />

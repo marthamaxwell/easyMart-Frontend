@@ -4,11 +4,11 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart, faNairaSign } from "@fortawesome/free-solid-svg-icons";
+import TheFooter from "../components/footer/2ndfooter";
 
 const ProductsPage = () => {
   const { productId } = useParams();
 
-  // console.log("the params =>", productId);
   const [singleProduct, setSingleProduct] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
@@ -30,15 +30,15 @@ const ProductsPage = () => {
 
   const [quantity, setQuantity] = useState(1);
   return (
-    <div className="products my-5">
-      {/* this is the product image section*/}
-      <div className="  mx-auto p-8 flex flex-col md:flex-row gap-24 w-screen md:w-[80vw]">
+    <div className="products mt-5">
+      {/*  product image section*/}
+      <div className="  mx-auto p-8 flex flex-col md:flex-row gap-24 w-screen md:w-[80vw] mb-5">
         <img
           src={singleProduct.image}
           alt="Product"
           className="w-[30vw] mx-auto rounded-xl"
         />
-        {/* This is the checkout details section */}
+        {/*  checkout details section */}
         <div className="flex flex-col gap-6 px-2 w-auto text-left">
           <h2 className=" text-3xl font-semibold text-gray-700 text-left text-wrap">
             {singleProduct.title}
@@ -96,6 +96,7 @@ const ProductsPage = () => {
         </div>
       </div>
       {/**this is the detail section */}
+      <TheFooter />
     </div>
   );
 };
