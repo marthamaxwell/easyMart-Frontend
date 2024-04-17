@@ -36,7 +36,7 @@ const NewProductCard = ({ miles }) => {
             <span className="">
               <FontAwesomeIcon
                 icon={faHeart}
-                className="h-4 absolute right-[7%] top-6 font-bold text-pri"
+                className="h-4 absolute right-[7%] top-6 font-bold text-white"
               />
             </span>
 
