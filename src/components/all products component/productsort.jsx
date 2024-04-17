@@ -107,7 +107,7 @@ const ProductSort = ({
             </label>
           </div>
           <button
-            className="border p-2 text-center capitalize text-xl bg-orange-400 rounded-xl text-white"
+            className="border p-2 text-center font-bold capitalize text-xl bg-orange-400 rounded-xl text-white"
             type="submit"
           >
             Clear
