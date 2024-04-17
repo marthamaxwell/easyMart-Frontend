@@ -67,7 +67,7 @@ const AdminPage = () => {
         >
           <div className=" flex flex-col">
             <span className="text-2xl font-bold">Welcome onboard Admin🖐 </span>
-            <span className="text-lg font-semi-bold mt-2 w-96">
+            <span className="text-lg font-semi-bold mt-2 w-[80%]">
               Wanna add some products?😃
             </span>
           </div>
