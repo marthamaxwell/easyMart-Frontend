@@ -21,7 +21,7 @@ const SpecialOfferCard = ({ miles }) => {
             <span className="">
               <FontAwesomeIcon
                 icon={faHeart}
-                className="h-4 absolute right-[7%] top-6 font-bold text-white"
+                className="h-4 absolute right-[7%] top-6 font-bold text-pri"
               />
             </span>
 
