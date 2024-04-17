@@ -14,7 +14,7 @@ const ProductSort = ({
         {/*browsing categories */}
         <div className="flex flex-col gap-2 ">
           <span className="text-2xl font-bold capitalize text-gray-600">
-            Market current category
+            Categories
           </span>
           <span className="capitalize font-semibold text-xl text-slate-600">
             browse other categories

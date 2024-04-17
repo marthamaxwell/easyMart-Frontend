@@ -9,6 +9,7 @@ import {
 
 const ProductCard = ({ image, price, title, rating, _id }) => {
   //function that would render stars based on the rating
+
   const ratingStars = () => {
     const stars = [];
     for (let i = 0; i < rating; i++) {
