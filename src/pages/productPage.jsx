@@ -30,7 +30,7 @@ const ProductsPage = () => {
 
   const [quantity, setQuantity] = useState(1);
   return (
-    <div className="products">
+    <div className="products my-5">
       {/* this is the product image section*/}
       <div className="  mx-auto p-8 flex flex-col md:flex-row gap-24 w-screen md:w-[80vw]">
         <img
