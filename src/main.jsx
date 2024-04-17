@@ -15,6 +15,8 @@ import ResetPasswordPage from "./pages/resetPasswordPage.jsx";
 import { AuthContextProvider } from "./components/context/authContext.jsx";
 import TestComp from "./components/login/test.jsx";
 import AdminPage from "./pages/AdminPage.jsx";
+import AllProductPage from "./pages/AllProductPage.jsx";
+import { ProductContextProvider } from "./components/context/productcontext.jsx";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +47,11 @@ const router = createBrowserRouter([
         path: "/test",
         element: <TestComp />,
       },
+
+      {
+        path: "/allproducts",
+        element: <AllProductPage />,
+      },
     ],
   },
   {
@@ -66,7 +73,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthContextProvider>
-      <RouterProvider router={router} />
+      <ProductContextProvider>
+        <RouterProvider router={router} />
+      </ProductContextProvider>
     </AuthContextProvider>
   </React.StrictMode>
 );

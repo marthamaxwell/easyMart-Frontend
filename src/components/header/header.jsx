@@ -49,17 +49,19 @@ const Header = () => {
             className=" md:hidden lg:hidden absolute right-[5%] mt-2 text-nav"
           />
         </div>
-        <div className="flex ">
-          <FontAwesomeIcon
-            className="text-pri mt-2 mr-[2px]"
-            icon={faCartShopping}
-          />
-          <h1 className="text-nav font-bold text-lg mb-2  md:text-2xl">
-            Easy
-            <span className="text-pri inline-block font-extrabold">.</span>
-            Mart
-          </h1>
-        </div>
+        <Link to={"/"}>
+          <div className="flex ">
+            <FontAwesomeIcon
+              className="text-pri mt-2 mr-[2px]"
+              icon={faCartShopping}
+            />
+            <h1 className="text-nav font-bold text-lg mb-2  md:text-2xl">
+              Easy
+              <span className="text-pri inline-block font-extrabold">.</span>
+              Mart
+            </h1>
+          </div>
+        </Link>
         <div className="md: mt-2 flex">
           <input
             className="invisible  bg-white text-nav border-2 rounded-lg outline-none relative indent-2 md:w-96 md:h-8 md:relative md:visible :"
