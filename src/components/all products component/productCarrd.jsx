@@ -24,13 +24,13 @@ const ProductCard = ({ image, price, title, rating, _id }) => {
         <div class="bg-card rounded-lg w-[220px] h-[350px] p-3 relative mt-4 hover:translate-y-2 hover:drop-shadow-lg">
           <img src={image} className=" mx-auto rounded-md h-52 mb-4" />
           <div className="">
-            <p className="absolute top-4 bg-sm w-[80px] text-center rounded-2xl text-pri font-normal text-base p-[0.5px] ml-1">
+            {/* <p className="absolute top-4 bg-sm w-[80px] text-center rounded-2xl text-pri font-normal text-base p-[0.5px] ml-1">
               New{" "}
-            </p>
+            </p> */}
             <span className="">
               <FontAwesomeIcon
                 icon={faHeart}
-                className="h-4 absolute right-[7%] top-6 font-bold text-pri"
+                className="h-4 absolute right-[7%] top-6 font-bold text-white"
               />
             </span>
 
