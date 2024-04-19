@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -10,6 +10,7 @@ import {
 import heart from "../../../assets/svg/heart.svg";
 
 const ProductCard = ({ miles }) => {
+  const [loading, setLoading] = useState();
   const ratingStars = () => {
     const stars = [];
     for (let i = 0; i < miles.rating; i++) {
