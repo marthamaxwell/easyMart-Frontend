@@ -11,7 +11,6 @@ import Special from "../components/homepageComponents/specialOffer/special";
 import SpecialOffer from "../components/homepageComponents/specialOffer/specialOffers";
 import Collection from "../components/homepageComponents/collection/collection";
 import TheFooter from "../components/footer/2ndfooter";
-import Collections from "../components/homepageComponents/collection/collection";
 import Collect from "../components/homepageComponents/collection/collect";
 
 const HomePage = () => {
