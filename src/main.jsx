@@ -17,6 +17,7 @@ import TestComp from "./components/login/test.jsx";
 import AdminPage from "./pages/AdminPage.jsx";
 import AllProductPage from "./pages/AllProductPage.jsx";
 import { ProductContextProvider } from "./components/context/productcontext.jsx";
+import { CartProvider } from "react-use-cart";
 
 const router = createBrowserRouter([
   {
@@ -72,10 +73,12 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <AuthContextProvider>
-      <ProductContextProvider>
-        <RouterProvider router={router} />
-      </ProductContextProvider>
-    </AuthContextProvider>
+    <CartProvider>
+      <AuthContextProvider>
+        <ProductContextProvider>
+          <RouterProvider router={router} />
+        </ProductContextProvider>
+      </AuthContextProvider>
+    </CartProvider>
   </React.StrictMode>
 );

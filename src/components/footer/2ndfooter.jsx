@@ -10,7 +10,7 @@ import {
 const TheFooter = () => {
   return (
     <div className="  bg-col ">
-      <div className=" w-[90%]  flex flex-wrap gap-2 sm:gap-3 md:gap-0 md:justify-between  mx-auto h-4/5 sm:h-60 md:h-32 items-center  ">
+      <div className=" w-[90%]  flex flex-wrap gap-2 sm:gap-3 md:gap-0 md:justify-between  mx-auto h-[90%] p-3 sm:p-0  sm:h-60 md:h-32 items-center  ">
         <div className="flex ">
           <FontAwesomeIcon
             className="text-pri mt-[6px] mr-[2px]"

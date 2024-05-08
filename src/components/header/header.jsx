@@ -41,7 +41,7 @@ const Header = () => {
 
   return (
     <div className="p-3 shadow-lg ">
-      <header className="flex flex-wrap md:justify-center md:gap-8  relative md:p-4    ">
+      <header className=" flex flex-wrap md:justify-center md:gap-8  relative md:p-4 text-black    ">
         <div>
           <FontAwesomeIcon
             icon={faBars}
@@ -102,7 +102,7 @@ const Header = () => {
               </ul>
             </div>
           </Link>
-          <Link to={"#"}>
+          <Link to={"/cart"}>
             <div className=" flex gap-1 ">
               <FontAwesomeIcon
                 className="h-5 md:h-7 mt-3  text-nav"
@@ -122,7 +122,7 @@ const Header = () => {
       </header>
       <Navbars OpenMenu={OpenMenu} Open={Open} />
       <div>
-        <ul className="md: flex md:justify-evenly md:flex-wrap  invisible md:visible md:text-base  md:p-4 ">
+        <ul className="md:flex md:justify-evenly md:flex-wrap hidden md:text-base  md:p-4 ">
           <li className="text-nav flex">
             All Categories
             <img

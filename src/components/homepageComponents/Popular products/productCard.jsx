@@ -10,7 +10,6 @@ import {
 import heart from "../../../assets/svg/heart.svg";
 
 const ProductCard = ({ miles }) => {
-  const [loading, setLoading] = useState();
   const ratingStars = () => {
     const stars = [];
     for (let i = 0; i < miles.rating; i++) {

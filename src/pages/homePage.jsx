@@ -12,6 +12,7 @@ import SpecialOffer from "../components/homepageComponents/specialOffer/specialO
 import Collection from "../components/homepageComponents/collection/collection";
 import TheFooter from "../components/footer/2ndfooter";
 import Collect from "../components/homepageComponents/collection/collect";
+import { CartProvider } from "react-use-cart";
 
 const HomePage = () => {
   return (

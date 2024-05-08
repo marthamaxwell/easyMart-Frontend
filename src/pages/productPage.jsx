@@ -5,8 +5,10 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart, faNairaSign } from "@fortawesome/free-solid-svg-icons";
 import TheFooter from "../components/footer/2ndfooter";
+import { useCart } from "react-use-cart";
 
 const ProductsPage = () => {
+  const { addItem } = useCart();
   const { productId } = useParams();
 
   const [singleProduct, setSingleProduct] = useState([]);
@@ -52,10 +54,10 @@ const ProductsPage = () => {
           </h1>
           <s className="-mt-2 font-semibold text-gray-500">NGN 4,000</s>
           <hr />
-          <section className=" flex gap-6">
-            <label className="text-gray-500">Quantity</label>
-            {/* This is the quantity selection section */}
-            <div className="flex gap-0 shadow-lg ">
+          {/* <section className=" flex gap-6">
+            <label className="text-gray-500">Quantity</label> */}
+          {/* This is the quantity selection section */}
+          {/* <div className="flex gap-0 shadow-lg ">
               <button
                 className="w-8 rounded-l-lg text-center py-1 px-1 text-gray-500 bg-gray-100 hover:bg-gray-300"
                 onClick={() => {
@@ -76,7 +78,7 @@ const ProductsPage = () => {
                 +
               </button>
             </div>
-          </section>
+          </section> */}
           <div className=" bg-orange-200 w-fit py-1 px-2 md:py-3 md:px-5 rounded-xl">
             <p>Price excludes shipping fee</p>
           </div>
@@ -88,9 +90,12 @@ const ProductsPage = () => {
             </p>
           </div>
           <div className="w-full h-16 rounded-xl hover:cursor-pointer hover:bg-[rgba(300,136,49,0.9)] bg-[rgba(255,136,49,1)] flex items-center text-center">
-            <Link className=" w-full  m-auto font-semibold text-2xl flex justify-center text-white">
+            <Link
+              className=" w-full  m-auto font-semibold text-2xl flex justify-center text-white"
+              onClick={() => addItem(singleProduct)}
+            >
               <FontAwesomeIcon icon={faShoppingCart} />
-              <p className="ml-2">Buy</p>
+              <p className="ml-2">Add to cart</p>
             </Link>
           </div>
         </div>
